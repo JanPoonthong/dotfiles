@@ -1,9 +1,15 @@
+# Shortcuts
+alias vi=vim
+
+# Switch repos
 alias cd.='cd ../'
 alias cd..='cd ../../'
 alias cd...='cd ../../../'
+alias h='cd ~/'
 
 alias gs='git status'
 alias gc='git commit -m'
 alias g.='git add .'
 alias g?='git diff'
 alias g^='git push'
+alias fp='fetch && pull'

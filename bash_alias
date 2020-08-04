@@ -1,0 +1,9 @@
+alias cd.='cd ../'
+alias cd..='cd ../../'
+alias cd...='cd ../../../'
+
+alias gs='git status'
+alias gc='git commit -m'
+alias g.='git add .'
+alias g?='git diff'
+alias g^='git push'

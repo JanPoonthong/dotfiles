@@ -40,6 +40,12 @@ set relativenumber
 set numberwidth=3
 set nostartofline
 
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
 " Searching
 set hlsearch
 set incsearch

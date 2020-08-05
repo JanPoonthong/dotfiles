@@ -60,6 +60,7 @@ set showcmd
 syntax on
 filetype on
 filetype indent on
+filetype plugin on
 set background=dark
 colorscheme elflord
 

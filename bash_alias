@@ -2,6 +2,7 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias python3=python
 alias vi=vim
 
 # Switch repos
@@ -10,6 +11,7 @@ alias cd..='cd ../../'
 alias cd...='cd ../../../'
 alias h='cd ~/'
 
+# Git
 alias gs='git status'
 alias gc='git commit -m'
 alias g.='git add .'

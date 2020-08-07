@@ -1,3 +1,4 @@
+"Credit to amix https://github.com/amix/vimrc
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -104,8 +105,10 @@ map <C-l> <C-W>l
 set laststatus=2
 set showcmd
 
+" Credit to Strager https://github.com/strager/dotfiles
 " Filename [Help][-][RO]
 set statusline=\ \ \ %<%f\ %h%m%r
+
 " Line, col
 set statusline+=%=%(%l,%c%V%)
 

@@ -4,6 +4,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias vi=vim
 
+# Credit to Strager https://github.com/strager/dotfiles
 # Switch repos
 alias cd.='cd ../'
 alias cd..='cd ../../'

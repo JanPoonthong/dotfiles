@@ -10,7 +10,6 @@ alias python=python3
 alias cd.='cd ../'
 alias cd..='cd ../../'
 alias cd...='cd ../../../'
-alias h='cd ~/'
 
 # Git
 alias gs='git status'

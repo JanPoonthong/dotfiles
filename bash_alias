@@ -3,6 +3,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vi=vim
+alias python=python3
 
 # Credit to Strager https://github.com/strager/dotfiles
 # Switch repos

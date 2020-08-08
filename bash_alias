@@ -1,7 +1,4 @@
 # Shortcuts
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 alias vi=vim
 alias python=python3
 
@@ -12,8 +9,8 @@ alias cd..='cd ../../'
 alias cd...='cd ../../../'
 
 # Git
-alias gs='git status'
-alias gc='git commit -m'
-alias g.='git add .'
+alias gs='git status -s -b'
+alias gc='git commit -v'
+alias g.='git add -p'
 alias g?='git diff'
 alias g^='git push'

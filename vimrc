@@ -64,8 +64,10 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable
 set background=dark
-colorscheme elflord
-"highlight Underlined term=NONE cterm=NONE gui=NONE
+let g:solarized_termtrans=1
+colorscheme solarized
+"highlight Comment ctermfg=10
+highlight Underlined term=NONE cterm=NONE gui=NONE
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

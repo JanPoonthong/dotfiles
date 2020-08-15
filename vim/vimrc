@@ -24,7 +24,7 @@ nmap <leader>w :w!<cr>
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Python Shortcut
-imap <F5> <Esc>:w<CR>:!python %<CR>
+imap <F5> <Esc>:w<CR>:!python3 %<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

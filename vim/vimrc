@@ -23,6 +23,9 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+" Python Shortcut
+imap <F5> <Esc>:w<CR>:!python %<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -39,7 +42,7 @@ set so=7
 " Turn on the Wild menu
 set wildmenu
 
-"Always show current position
+" Always show current position
 set ruler
 
 " Height of the command bar

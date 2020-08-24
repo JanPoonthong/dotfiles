@@ -1,6 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -26,9 +24,7 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Python Shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set number
 set relativenumber
 
@@ -83,9 +79,7 @@ set titlestring=%t
 set titleold=
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
 set background=dark
@@ -99,18 +93,14 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowb
 set noswapfile
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
 
@@ -130,9 +120,7 @@ set si "Smart indent
 set wrap "Wrap lines
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
@@ -154,9 +142,7 @@ map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
 
-""""""""""""""""""""""""""""""
 " => Status line
-""""""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
@@ -167,9 +153,7 @@ set statusline=\ \ \ %<%f\ %h%m%r
 set statusline+=%=%(%l,%c%V%)
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
@@ -184,8 +168,6 @@ if has("autocmd")
 endif
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>

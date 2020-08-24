@@ -24,6 +24,9 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Python Shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" Javascript Shortcut
+autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!nodejs' shellescape(@%, 1)<CR>
+
 " => VIM user interface
 " Set number
 set relativenumber

@@ -155,6 +155,9 @@ set statusline=\ \ \ %<%f\ %h%m%r
 " Line, col
 set statusline+=%=%(%l,%c%V%)
 
+" Showcmd
+set showcmd
+
 
 " => Editing mappings
 " Delete trailing white space on save, useful for some filetypes ;)

@@ -21,10 +21,10 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
-" Python Shortcut
+" Python shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-" Javascript Shortcut
+" Javascript shortcut
 autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!nodejs' shellescape(@%, 1)<CR>
 
 " => VIM user interface

@@ -80,6 +80,7 @@ source $HOME/dotfiles/aliases
 
 export PATH=~/Downloads/Discord:$PATH
 export EDITOR=vim
+export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 
 # User configuration
 

@@ -6,9 +6,12 @@ set history=500
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
-set autoread
-au FocusGained,BufEnter * checktime
+call plug#begin('~/.vim/plugged')
+
+" Plug
+Plug 'dense-analysis/ale'
+
+call plug#end()
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -61,9 +64,6 @@ set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch
-
-" For regular expressions turn magic on
-set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -148,17 +148,13 @@ set statusline+=%=%(%l,%c%V%)
 " Showcmd
 set showcmd
 
+" Linting
+let g:ale_set_signs = 0
+let g:ale_lint_delay = 0
+let g:ale_set_highlights = 1
 
-" => Editing mappings
-" Delete trailing white space on save, useful for some filetypes ;)
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
+highlight ALEError ctermbg=none ctermfg=red cterm=underline
+highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
+" Load all plugins now.
+packloadall

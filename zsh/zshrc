@@ -76,7 +76,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/dotfiles/aliases
+source $HOME/dotfiles/zsh/aliases
 
 export PATH=~/Downloads/Discord:$PATH
 export EDITOR=vim
@@ -107,3 +107,5 @@ export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

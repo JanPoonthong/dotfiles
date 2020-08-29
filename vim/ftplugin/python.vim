@@ -6,7 +6,7 @@
 " Last Change:	Sun 17 Mar 2019
 " https://github.com/tpict/vim-ftplugin-python
 
-" Run flake9 linter with ALE
+" Run flake8 linter with ALE
 let b:ale_linters = ['flake8']
 
 if exists("b:did_ftplugin") | finish | endif

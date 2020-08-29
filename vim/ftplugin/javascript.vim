@@ -4,6 +4,9 @@
 " Last Change:  2008 Jun 15
 " URL:		http://gus.gscit.monash.edu.au/~djkea2/vim/ftplugin/javascript.vim
 
+" Run eslint linter with ALE
+let b:ale_linters = ['eslint']
+
 if exists("b:did_ftplugin")
   finish
 endif

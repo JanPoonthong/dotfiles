@@ -157,5 +157,22 @@ let g:ale_set_highlights = 1
 highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
+" => Fzf
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+
+" Set history
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" Open files in horizontal split
+nnoremap <silent> <Leader>s :call fzf#run({
+\   'down': '40%',
+\   'sink': 'botright split' })<CR>
+
+" Open files in vertical horizontal split
+nnoremap <silent> <Leader>v :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
+
 " Load all plugins now.
 packloadall

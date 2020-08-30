@@ -69,8 +69,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+fpath=(~/dotfiles/zsh/jan "${fpath[@]}")
+autoload -Uk strager_prompt_cwd
+
 plugins=(
-	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -108,4 +110,11 @@ export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+setopt prompt_subst
+PROMPT=
+# Current directory.
+PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
+# Exit code of previous command.
+PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
+# Terminator.
+PROMPT="${PROMPT}> "

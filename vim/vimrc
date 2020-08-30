@@ -150,6 +150,9 @@ highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 " => Fzf
+" Adding the directory to runtimepath
+set rtp+=~/.fzf
+
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = ''
 

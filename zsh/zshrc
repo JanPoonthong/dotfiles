@@ -8,7 +8,7 @@ export ZSH="/home/jan/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,6 +110,7 @@ export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# => Prompt
 setopt prompt_subst
 PROMPT=
 # Current directory.
@@ -118,3 +119,33 @@ PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 # Terminator.
 PROMPT="${PROMPT}> "
+
+# => Cursor
+# Activate vim mode.
+bindkey -v
+
+# Remove mode switching delay.
+KEYTIMEOUT=5
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+
+# Use beam shape cursor on startup.
+echo -ne '\e[5 q'
+
+# Use beam shape cursor for each new prompt.
+preexec() {
+   echo -ne '\e[5 q'
+}

@@ -16,3 +16,6 @@
 [submodule "vim/plugged/fzf"]
 	path = vim/plugged/fzf
 	url = https://github.com/junegunn/fzf
+[submodule "vim/vim/pack/git-plugins/start/ale"]
+	path = vim/vim/pack/git-plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git

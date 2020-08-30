@@ -1,1 +1,0 @@
-/home/jan/dotfiles/vim/autoload/vim-plug/plug.vim

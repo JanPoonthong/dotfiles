@@ -10,3 +10,9 @@
 [submodule "vim/plugged/vim/plugged/ale"]
 	path = vim/plugged/vim/plugged/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "vim/plugged/fzf"]
+	path = vim/plugged/fzf
+	url = https://github.com/junegunn/fzf

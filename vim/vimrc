@@ -88,6 +88,51 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" Linting
+let g:ale_set_signs = 0
+let g:ale_lint_delay = 0
+let g:ale_set_highlights = 1
+
+highlight ALEError ctermbg=none ctermfg=red cterm=underline
+highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
+
+" => Fzf
+" Adding the directory to runtimepath
+set rtp+=~/.fzf
+
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+
+" Set history
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" Open files in horizontal split
+nnoremap <silent> <Leader>s :call fzf#run({
+\   'down': '40%',
+\   'sink': 'botright split' })<CR>
+
+" Open files in vertical horizontal split
+nnoremap <silent> <Leader>v :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
+
+" Load all plugins now.
+packloadall
+
+" => Cursor
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' | 
+    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
+
+autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 
 " => Text, tab and indent related
 " Use spaces instead of tabs
@@ -140,34 +185,3 @@ set statusline+=%=%(%l,%c%V%)
 
 " Showcmd
 set showcmd
-
-" Linting
-let g:ale_set_signs = 0
-let g:ale_lint_delay = 0
-let g:ale_set_highlights = 1
-
-highlight ALEError ctermbg=none ctermfg=red cterm=underline
-highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
-
-" => Fzf
-" Adding the directory to runtimepath
-set rtp+=~/.fzf
-
-" Empty value to disable preview window altogether
-let g:fzf_preview_window = ''
-
-" Set history
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-
-" Open files in horizontal split
-nnoremap <silent> <Leader>s :call fzf#run({
-\   'down': '40%',
-\   'sink': 'botright split' })<CR>
-
-" Open files in vertical horizontal split
-nnoremap <silent> <Leader>v :call fzf#run({
-\   'right': winwidth('.') / 2,
-\   'sink':  'vertical botright split' })<CR>
-
-" Load all plugins now.
-packloadall

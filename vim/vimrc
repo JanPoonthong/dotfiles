@@ -1,21 +1,17 @@
 " => General
 " Sets how many lines of history VIM has to remember
 set history=500
+set viminfo+=:500
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 
+" Load all plugins now.
+packloadall
+
 " With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
 let mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
-" :W sudo saves the file 
-" (useful for handling the permission-denied error)
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Python shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -29,22 +25,24 @@ set relativenumber
 
 " Set numberwidth
 set numberwidth=3
+set nostartofline
 
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" Set 5 lines to the cursor
+set sidescroll=5
+set scrolloff=5
 
 " Turn on the Wild menu
 set wildmenu
+set wildmode=longest,full
 
 " Always show current position
 set ruler
 
-" Height of the command bar
-set cmdheight=1
-
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+set completeopt=menu,preview
+
+set clipboard=
 
 " Ignore case when searching
 set ignorecase
@@ -58,10 +56,8 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
+" Save searches
+set viminfo+=/200
 
 " No annoying sound on errors
 set noerrorbells
@@ -84,9 +80,6 @@ colorscheme solarized
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
 
 " Linting
 let g:ale_set_signs = 0
@@ -116,8 +109,6 @@ nnoremap <silent> <Leader>v :call fzf#run({
 \   'right': winwidth('.') / 2,
 \   'sink':  'vertical botright split' })<CR>
 
-" Load all plugins now.
-packloadall
 
 " => Cursor
 " Ps = 0  -> blinking block.
@@ -146,15 +137,17 @@ autocmd VimLeave * silent exec "! echo -ne '\e[6 q'"
 " Use spaces instead of tabs
 set expandtab
 
-" Be smart when using tabs ;)
-set smarttab
+" No smartindent
+set nosmartindent
 
 " 1 tab == 4 spaces
 set shiftwidth=4
-set tabstop=4
+set tabstop=8
+set softtabstop=-1
 
 " Linebreak on 60 characters
-set tw=60
+set tw=60 cc=60
+set nojoinspaces
 set formatoptions=cloqr
 
 set noai " Don't auto indent
@@ -178,7 +171,9 @@ map <C-l> <C-W>l
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+nmap <unique> ts :split<SPACE>
+nmap <unique> tv :vsplit<SPACE>
+set splitbelow splitright
 
 
 " => Status line
@@ -192,4 +187,8 @@ set statusline=\ \ \ %<%f\ %h%m%r
 set statusline+=%=%(%l,%c%V%)
 
 " Showcmd
+set esckeys
+set notimeout ttimeout ttimeoutlen=0
 set showcmd
+
+set exrc secure

@@ -176,6 +176,11 @@ nmap <unique> tv :vsplit<SPACE>
 set splitbelow splitright
 
 
+" => Swap
+" Save swap file in ~/.vim/swap/
+set directory=~/.vim/swap/
+
+
 " => Status line
 " Always show the status line
 set laststatus=2

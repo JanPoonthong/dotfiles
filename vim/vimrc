@@ -171,8 +171,6 @@ map <C-l> <C-W>l
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
-nmap <unique> ts :split<SPACE>
-nmap <unique> tv :vsplit<SPACE>
 set splitbelow splitright
 
 

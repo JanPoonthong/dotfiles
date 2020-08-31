@@ -17,7 +17,7 @@ let mapleader = ","
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 " Javascript shortcut
-autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!nodejs' shellescape(@%, 1)<CR>
+autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!node' shellescape(@%, 1)<CR>
 
 " => VIM user interface
 " Set number

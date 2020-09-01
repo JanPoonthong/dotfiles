@@ -125,6 +125,8 @@ PROMPT="${PROMPT}> "
 echo -ne '\e[6 q'
 
 # Use beam shape cursor for each new prompt.
-preexec() {
+_fix_cursor() {
    echo -ne '\e[6 q'
-} 
+}
+
+precmd_functions+=(_fix_cursor)

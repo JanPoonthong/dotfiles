@@ -42,8 +42,6 @@ set ruler
 set backspace=eol,start,indent
 set completeopt=menu,preview
 
-set clipboard=
-
 " Ignore case when searching
 set ignorecase
 

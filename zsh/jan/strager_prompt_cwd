@@ -1,3 +1,4 @@
+# Credit to Strager https://github.com/strager/dotfiles
 strager_prompt_cwd() {
     strager_prompt_shrink_path "$(print -P %~)"
 }

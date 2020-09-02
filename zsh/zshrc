@@ -111,6 +111,7 @@ export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # => Prompt
+# Credit Strager https://github.com/strager/dotfiles
 setopt prompt_subst
 PROMPT=
 # Current directory.
@@ -128,5 +129,4 @@ echo -ne '\e[6 q'
 _fix_cursor() {
    echo -ne '\e[6 q'
 }
-
 precmd_functions+=(_fix_cursor)

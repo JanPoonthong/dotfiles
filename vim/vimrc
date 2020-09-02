@@ -65,6 +65,7 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Credit to Strager https://github.com/strager/dotfiles
 " Terminal window title
 set title
 set titlestring=%t
@@ -174,6 +175,7 @@ set directory=~/.vim/swap/
 
 
 " => Status line
+" Credit to Strager https://github.com/strager/dotfiles
 " Always show the status line
 set laststatus=2
 

@@ -1,0 +1,10 @@
+[user]
+	email = janpoonthong628@gmail.com
+	name = Jan Poonthong
+[core]
+	editor = vim
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

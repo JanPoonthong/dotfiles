@@ -172,6 +172,9 @@ set directory=~/.vim/swap/
 " Credit to Strager https://github.com/strager/dotfiles
 " Always show the status line
 set laststatus=2
+set noshowmatch
+set nosm
+let g:loaded_matchparen=1
 
 " Filename [Help][-][RO]
 set statusline=\ \ \ %<%f\ %h%m%r

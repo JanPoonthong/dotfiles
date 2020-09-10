@@ -8,3 +8,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
+[merge]
+        conflictstyle = diff3

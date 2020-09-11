@@ -26,7 +26,7 @@ use-system-font=false
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=false
-visible-name='jan'
+visible-name='Jan'
 
 [legacy]
 default-show-menubar=false

@@ -92,10 +92,8 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 " Adding the directory to runtimepath
 set rtp+=~/dotfiles/vim/pack/git-plugins/start/fzf
 
-" Open files in horizontal split
-nnoremap <silent> <Leader>s :call fzf#run({
-\   'down': '40%',
-\   'sink': 'tab split' })<CR>
+" Open files in new tab in vim
+nnoremap <silent> <Leader>s :call fzf#run({'source': 'find ~', 'down': '40%', 'sink': 'tabedit'})<CR>
 
 " => Cursor
 " Ps = 0  -> blinking block.

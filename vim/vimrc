@@ -93,7 +93,7 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 set rtp+=~/dotfiles/vim/pack/git-plugins/start/fzf
 
 " Open files in new tab in vim
-nnoremap <silent> <Leader>s :call fzf#run({'source': 'find ~', 'down': '40%', 'sink': 'tabedit'})<CR>
+nnoremap <silent> <Leader>s :call fzf#run({'source': "find ~ -name '.*' -prune", 'down': '40%', 'sink': 'tabedit'})<CR>
 
 " => Cursor
 " Ps = 0  -> blinking block.

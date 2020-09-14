@@ -1,18 +1,3 @@
-[submodule "vim/pack/git-plugins/start/ale"]
-	path = vim/pack/git-plugins/start/ale
-	url = https://github.com/dense-analysis/ale.git
-[submodule "vim/autoload/vim-plug"]
-	path = vim/autoload/vim-plug
-	url = https://github.com/junegunn/vim-plug
-[submodule "vim/plugged/vim/plugged/ale"]
-	path = vim/plugged/vim/plugged/ale
-	url = https://github.com/dense-analysis/ale
-[submodule "vim/plugged/ale"]
-	path = vim/plugged/ale
-	url = https://github.com/dense-analysis/ale
-[submodule "vim/plugged/fzf"]
-	path = vim/plugged/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "vim/vim/pack/git-plugins/start/ale"]
-	path = vim/vim/pack/git-plugins/start/ale
-	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/colors/vim-colors-solarized"]
+	path = vim/colors/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git

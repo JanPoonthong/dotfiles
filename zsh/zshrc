@@ -27,4 +27,6 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
+
+# => ls
 zstyle ':completion:*' menu select

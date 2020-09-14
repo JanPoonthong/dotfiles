@@ -90,24 +90,12 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 " => Fzf
 " Adding the directory to runtimepath
-set rtp+=~/.fzf
-
-" Empty value to disable preview window altogether
-let g:fzf_preview_window = ''
-
-" Set history
-let g:fzf_history_dir = '~/.local/share/fzf-history'
+set rtp+=~/dotfiles/vim/pack/git-plugins/start/fzf
 
 " Open files in horizontal split
 nnoremap <silent> <Leader>s :call fzf#run({
 \   'down': '40%',
-\   'sink': 'botright split' })<CR>
-
-" Open files in vertical horizontal split
-nnoremap <silent> <Leader>v :call fzf#run({
-\   'right': winwidth('.') / 2,
-\   'sink':  'vertical botright split' })<CR>
-
+\   'sink': 'tab split' })<CR>
 
 " => Cursor
 " Ps = 0  -> blinking block.

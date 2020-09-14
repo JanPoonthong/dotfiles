@@ -27,5 +27,4 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
-
-alias ls='ls --color=auto'
+zstyle ':completion:*' menu select

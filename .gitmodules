@@ -4,3 +4,9 @@
 [submodule "vim/pack/git-plugins/start/ale"]
 	path = vim/pack/git-plugins/start/ale
 	url = git@github.com:dense-analysis/ale.git
+[submodule "zsh/zsh-autosuggestions"]
+	path = zsh/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "zsh/zsh-syntax-highlighting"]
+	path = zsh/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git

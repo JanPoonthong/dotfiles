@@ -2,8 +2,7 @@ fpath=(~/dotfiles/zsh/jan "${fpath[@]}")
 autoload -Uk strager_prompt_cwd
 
 source $HOME/dotfiles/zsh/aliases
-source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=vim
 export PATH=~/Downloads/Discord:$PATH
@@ -30,3 +29,4 @@ precmd_functions+=(_fix_cursor)
 
 # => ls
 zstyle ':completion:*' menu select
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

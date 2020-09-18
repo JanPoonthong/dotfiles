@@ -9,6 +9,13 @@ export PATH=~/Downloads/Discord:$PATH
 export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
 export PATH=~/Downloads/pycharm-community-2020.2.1/bin:$PATH
 
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+
 # => Prompt
 # Credit Strager https://github.com/strager/dotfiles
 setopt prompt_subst
@@ -24,7 +31,6 @@ PROMPT="${PROMPT}> "
 _fix_cursor() {
    echo -ne '\e[6 q'
 }
-
 precmd_functions+=(_fix_cursor)
 
 # => ls

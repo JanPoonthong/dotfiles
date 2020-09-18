@@ -90,7 +90,7 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 " => Fzf
 " Adding the directory to runtimepath
-set rtp+=~/dotfiles/vim/pack/git-plugins/start/fzf
+set rtp+=~/.fzf/
 
 " Open files in current directory
 nnoremap <silent> <leader>F :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>

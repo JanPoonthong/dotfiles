@@ -5,9 +5,9 @@ source $HOME/dotfiles/zsh/aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=vim
-export PATH=~/Downloads/Discord:$PATH
-export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
-export PATH=~/Downloads/pycharm-community-2020.2.1/bin:$PATH
+# export PATH=~/Downloads/Discord:$PATH
+# export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
+# export PATH=~/Downloads/pycharm-community-2020.2.2/bin/:$PATH
 
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000

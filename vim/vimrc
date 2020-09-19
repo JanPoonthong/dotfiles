@@ -69,6 +69,8 @@ set title
 set titlestring=%t
 set titleold=
 
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
 
 " => Colors and Fonts
 " Enable syntax highlighting
@@ -77,9 +79,7 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
+" => ALE
 " Linting
 let g:ale_set_signs = 0
 let g:ale_lint_delay = 0
@@ -107,7 +107,7 @@ nnoremap <silent> <Leader>s :call fzf#run({'source': "find ~ -name '.*' -prune",
 " Ps = 5  -> blinking bar (xterm).
 " Ps = 6  -> steady bar (xterm).
 
-"Mode Settings
+" Cursor Settings
 let &t_SI.="\e[6 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
@@ -135,7 +135,6 @@ set formatoptions=cloqr
 set noai " Don't auto indent
 set nowrap "Don't wrap lines
 
-
 " => Moving around, tabs, windows and buffers
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -151,11 +150,9 @@ map <C-l> <C-W>l
 map <leader>tc :tabclose<cr>
 set splitbelow splitright
 
-
 " => Swap
 " Save swap file in ~/.vim/swap/
 set directory=~/.vim/swap/
-
 
 " => Status line
 " Credit to Strager https://github.com/strager/dotfiles

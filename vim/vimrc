@@ -1,4 +1,8 @@
 " => General
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+scriptencoding utf-8
+
 " Sets how many lines of history VIM has to remember
 set history=500
 set viminfo+=:500
@@ -68,9 +72,6 @@ set tm=500
 set title
 set titlestring=%t
 set titleold=
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
 
 " => Colors and Fonts
 " Enable syntax highlighting

@@ -34,6 +34,7 @@ _fix_cursor() {
 precmd_functions+=(_fix_cursor)
 
 # => Syntax
+# Credit to https://github.com/strager/dotfiles(Strager)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 typeset -A ZSH_HIGHLIGHT_STYLES
 _command_style='fg=26'

@@ -2,6 +2,7 @@
 	email = janpoonthong628@gmail.com
 	name = Jan Poonthong
 [core]
+        excludesfile = ~/.gitignore
 	editor = vim
 
 [color "status"]

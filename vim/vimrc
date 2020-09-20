@@ -1,87 +1,87 @@
-" => General
-" Set utf8 as standard encoding and en_US as the standard language
+"""  General
+""" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 scriptencoding utf-8
 
-" Sets how many lines of history VIM has to remember
+""" Sets how many lines of history VIM has to remember
 set history=500
 set viminfo+=:500
 
-" Enable filetype plugins
+""" Enable filetype plugins
 filetype plugin on
 filetype indent on
 
-" Load all plugins now.
+""" Load all plugins now.
 packloadall
 
-" With a map leader it's possible to do extra key combinations
+""" With a map leader it's possible to do extra key combinations
 let mapleader = ","
 
-" Python shortcut
+""" Python shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-" Javascript shortcut
+""" Javascript shortcut
 autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!node' shellescape(@%, 1)<CR>
 
-" => VIM user interface
-" Set number
+""" VIM user interface
+""" Set number
 set relativenumber
 
-" Set numberwidth
+""" Set numberwidth
 set numberwidth=3
 set nostartofline
 
-" Set 5 lines to the cursor
+""" Set 5 lines to the cursor
 set sidescroll=5
 set scrolloff=5
 
-" Turn on the Wild menu
+""" Turn on the Wild menu
 set wildmenu
 set wildmode=longest,full
 
-" Always show current position
+""" Always show current position
 set ruler
 
-" Configure backspace so it acts as it should act
+""" Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set completeopt=menu,preview
 
-" Ignore case when searching
+""" Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases
+""" When searching try to be smart about cases
 set smartcase
 
-" Highlight search results
+""" Highlight search results
 set hlsearch
 
-" Makes search act like search in modern browsers
+""" Makes search act like search in modern browsers
 set incsearch
 
-" Save searches
+""" Save searches
 set viminfo+=/200
 
-" No annoying sound on errors
+""" No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
-" Credit to Strager https://github.com/strager/dotfiles
-" Terminal window title
+""" Credit to Strager https://github.com/strager/dotfiles
+""" Terminal window title
 set title
 set titlestring=%t
 set titleold=
 
-" => Colors and Fonts
-" Enable syntax highlighting
+""" Colors and Fonts
+""" Enable syntax highlighting
 syntax enable
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" => ALE
-" Linting
+""" ALE
+""" Linting
 let g:ale_set_signs = 0
 let g:ale_lint_delay = 0
 let g:ale_set_highlights = 1
@@ -89,26 +89,26 @@ let g:ale_set_highlights = 1
 highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
-" => Fzf
-" Adding the directory to runtimepath
+""" Fzf
+""" Adding the directory to runtimepath
 set rtp+=~/.fzf/
 
-" Open files in current directory
+""" Open files in current directory
 nnoremap <silent> <leader>F :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
 
-" Open files in new tab in vim
+""" Open files in new tab in vim
 nnoremap <silent> <Leader>s :call fzf#run({'source': "find ~ -name '.*' -prune", 'down': '40%', 'sink': 'tabedit'})<CR>
 
-" => Cursor
-" Ps = 0  -> blinking block.
-" Ps = 1  -> blinking block (default).
-" Ps = 2  -> steady block.
-" Ps = 3  -> blinking underline.
-" Ps = 4  -> steady underline.
-" Ps = 5  -> blinking bar (xterm).
-" Ps = 6  -> steady bar (xterm).
+""" Cursor
+""" Ps = 0  -> blinking block.
+""" Ps = 1  -> blinking block (default).
+""" Ps = 2  -> steady block.
+""" Ps = 3  -> blinking underline.
+""" Ps = 4  -> steady underline.
+""" Ps = 5  -> blinking bar (xterm).
+""" Ps = 6  -> steady bar (xterm).
 
-" Cursor Settings
+""" Cursor Settings
 let &t_SI.="\e[6 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
@@ -116,19 +116,19 @@ let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 autocmd VimEnter * silent exec "! echo -ne '\e[2 q'"
 autocmd VimLeave * silent exec "! echo -ne '\e[6 q'"
 
-" => Text, tab and indent related
-" Use spaces instead of tabs
+""" Text, tab and indent related
+""" Use spaces instead of tabs
 set expandtab
 
-" No smartindent
+""" No smartindent
 set nosmartindent
 
-" 1 tab == 4 spaces
+""" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=8
 set softtabstop=-1
 
-" Linebreak on 60 characters
+""" Linebreak on 60 characters
 set tw=60 cc=60
 set nojoinspaces
 set formatoptions=cloqr
@@ -136,40 +136,40 @@ set formatoptions=cloqr
 set noai " Don't auto indent
 set nowrap "Don't wrap lines
 
-" => Moving around, tabs, windows and buffers
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+""" Moving around, tabs, windows and buffers
+""" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
 
-" Smart way to move between windows
+""" Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Useful mappings for managing tabs
+""" Useful mappings for managing tabs
 map <leader>tc :tabclose<cr>
 set splitbelow splitright
 
-" => Swap
-" Save swap file in ~/.vim/swap/
+""" Swap
+""" Save swap file in ~/.vim/swap/
 set directory=~/.vim/swap/
 
-" => Status line
-" Credit to Strager https://github.com/strager/dotfiles
-" Always show the status line
+""" Status line
+""" Credit to Strager https://github.com/strager/dotfiles
+""" Always show the status line
 set laststatus=2
 set noshowmatch
 set nosm
 let g:loaded_matchparen=1
 
-" Filename [Help][-][RO]
+""" Filename [Help][-][RO]
 set statusline=\ \ \ %<%f\ %h%m%r
 
-" Line, col
+""" Line, col
 set statusline+=%=%(%l,%c%V%)
 
-" Showcmd
+""" Showcmd
 set esckeys
 set notimeout ttimeout ttimeoutlen=0
 set showcmd

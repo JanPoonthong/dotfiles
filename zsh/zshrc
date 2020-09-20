@@ -16,6 +16,15 @@ export SAVEHIST=1000000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
+# Command interpretation
+setopt CHASE_DOTS
+setopt INTERACTIVE_COMMENTS
+setopt AUTOCD
+
+# Keyboard bindings
+# Credit Strager https://github.com/strager/dotfiles
+bindkey '^I' menu-expand-or-complete
+
 # => Prompt
 # Credit Strager https://github.com/strager/dotfiles
 setopt prompt_subst
@@ -32,6 +41,9 @@ _fix_cursor() {
    echo -ne '\e[6 q'
 }
 precmd_functions+=(_fix_cursor)
+
+# => ls
+zstyle ':completion:*' menu select
 
 # => Syntax
 # Credit to https://github.com/strager/dotfiles(Strager)
@@ -58,7 +70,4 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="${_argument_style}"
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_error_style}"
 # Automatic completion.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
-
-# => ls
-zstyle ':completion:*' menu select
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

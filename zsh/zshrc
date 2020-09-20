@@ -43,7 +43,10 @@ _fix_cursor() {
 precmd_functions+=(_fix_cursor)
 
 # => ls
-zstyle ':completion:*' menu select
+# Credit Strager https://github.com/strager/dotfiles
+# zstyle ':completion:*' menu select
+zstyle ":completion:*:default" list-colors no=00 bd=33 cd=33 di=34 ex=31 ln=35 pi=33 so=32
+export LS_COLORS=no=00:bd=33:cd=33:di=34:ex=31:ln=35:pi=33:so=32:
 
 # => Syntax
 # Credit to https://github.com/strager/dotfiles(Strager)

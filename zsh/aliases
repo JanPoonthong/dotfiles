@@ -6,6 +6,7 @@ alias gc="git commit -v"
 alias g.="git add -p"
 alias gi="git add -i"
 alias g^="git push"
+alias gl="git log --stat"
 alias gd="git diff"
 alias gfp="git fetch && git pull"
 

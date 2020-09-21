@@ -54,6 +54,7 @@ set smartcase
 
 """ Highlight search results
 set hlsearch
+nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
 """ Makes search act like search in modern browsers
 set incsearch

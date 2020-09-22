@@ -1,5 +1,7 @@
 #!/bin/sh
 
 sudo apt update && sudo apt upgrade -y
-apt list –upgradable
+sudo apt list --upgradable
+sudo apt dist-upgrade -y
+sudo apt clean
 sudo apt autoremove

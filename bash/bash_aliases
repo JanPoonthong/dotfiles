@@ -1,5 +1,4 @@
 # Credit to Strager https://github.com/strager/dotfiles/
-
 # Git
 alias gs="git status -s -b && git log -n 5 --oneline"
 alias gc="git commit -v"

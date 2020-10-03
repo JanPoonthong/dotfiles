@@ -13,7 +13,7 @@ alias gd="git diff"
 alias gp="git checkout -p"
 # alias go="git checkout"
 alias gfp="git fetch && git pull"
-alias ga="git commit --amend --reuse-message=HEAD"
+# alias ga="git commit --amend --reuse-message=HEAD"
 
 # Shortcut
 alias cd.="cd ../"

@@ -12,4 +12,4 @@ sudo apt autoremove
 echo 'Vim'
 cd ~/Downloads/vim/ && git fetch && git pull
 echo 'Font'
-cd ~/Downloads/font/comic-shanns/ && git fetch && git pull
+cd ~/Downloads/fonts/comic-shanns/ && git fetch && git pull

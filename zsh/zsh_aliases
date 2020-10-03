@@ -10,9 +10,10 @@ alias gl="git log --stat"
 alias gd="git diff"
 # alias gdd="git diff --cached"
 # alias gv="git pull --ff --commit"
-# alias gp="git checkout -p"
+alias gp="git checkout -p"
 # alias go="git checkout"
 alias gfp="git fetch && git pull"
+alias ga="git commit --amend --reuse-message=HEAD"
 
 # Shortcut
 alias cd.="cd ../"

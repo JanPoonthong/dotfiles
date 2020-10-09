@@ -6,8 +6,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=vim
 # export PATH=~/Downloads/Discord:$PATH
-# export PATH=~/Downloads/node-v12.18.3-linux-x64/bin:$PATH
-# export PATH=~/Downloads/pycharm-community-2020.2.2/bin/:$PATH
+export PATH=~/Downloads/node-v12.19.0-linux-x64/bin:$PATH
+# export PATH=~/Downloads/pycharm-community-2020.2.2/bin:$PATH
 
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000
@@ -74,3 +74,5 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_error_style}"
 # Automatic completion.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

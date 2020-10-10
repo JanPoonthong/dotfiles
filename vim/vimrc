@@ -90,6 +90,17 @@ let g:ale_set_highlights = 1
 highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
+""" Switching tab
+let s:i = 1
+while s:i <= 10
+  execute printf(
+    \ 'nnoremap <unique> <Leader>%d :%dtabnext<CR>',
+    \ s:i == 10 ? 0 : s:i,
+    \ s:i,
+  \ )
+  let s:i += 1
+endwhile
+
 """ Fzf
 """ Adding the directory to runtimepath
 set rtp+=~/.fzf/
@@ -136,6 +147,7 @@ set softtabstop=-1
 set tw=60 cc=60
 set nojoinspaces
 set formatoptions=cloqr
+set listchars+=tab:⇥\
 
 set noai " Don't auto indent
 set nowrap "Don't wrap lines
@@ -143,7 +155,6 @@ set nowrap "Don't wrap lines
 """ Moving around, tabs, windows and buffers
 """ Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-map <C-space> ?
 
 """ Smart way to move between windows
 map <C-j> <C-W>j
@@ -152,7 +163,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 """ Useful mappings for managing tabs
-map <leader>tc :tabclose<cr>
+map <leader>c :tabclose<cr>
 set splitbelow splitright
 
 """ Swap

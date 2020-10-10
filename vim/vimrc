@@ -4,8 +4,8 @@ set encoding=utf8
 scriptencoding utf-8
 
 """ Sets how many lines of history VIM has to remember
-set history=500
-set viminfo+=:500
+set history=10000
+set viminfo+=:10000
 
 """ Enable filetype plugins
 filetype plugin on
@@ -54,6 +54,8 @@ set smartcase
 
 """ Highlight search results
 set hlsearch
+
+""" Unhighlight search results
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
 """ Makes search act like search in modern browsers
@@ -62,17 +64,27 @@ set incsearch
 """ Save searches
 set viminfo+=/200
 
-""" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+""" Disable match {} () []
+set noshowmatch
+set nosm
+let g:loaded_matchparen=1
 
 """ Credit to Strager https://github.com/strager/dotfiles
 """ Terminal window title
 set title
 set titlestring=%t
 set titleold=
+
+""" Switching tab
+let s:i = 1
+while s:i <= 10
+  execute printf(
+    \ 'nnoremap <unique> <Leader>%d :%dtabnext<CR>',
+    \ s:i == 10 ? 0 : s:i,
+    \ s:i,
+  \ )
+  let s:i += 1
+endwhile
 
 """ Colors and Fonts
 """ Enable syntax highlighting
@@ -87,19 +99,10 @@ let g:ale_set_signs = 0
 let g:ale_lint_delay = 0
 let g:ale_set_highlights = 1
 
+""" Underline the ALE with red color
 highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
-""" Switching tab
-let s:i = 1
-while s:i <= 10
-  execute printf(
-    \ 'nnoremap <unique> <Leader>%d :%dtabnext<CR>',
-    \ s:i == 10 ? 0 : s:i,
-    \ s:i,
-  \ )
-  let s:i += 1
-endwhile
 
 """ Fzf
 """ Adding the directory to runtimepath
@@ -157,14 +160,14 @@ set nowrap "Don't wrap lines
 map <space> /
 
 """ Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
+set splitbelow splitright
 
 """ Useful mappings for managing tabs
 map <leader>c :tabclose<cr>
-set splitbelow splitright
 
 """ Swap
 """ Save swap file in ~/.vim/swap/
@@ -174,9 +177,6 @@ set directory=~/.vim/swap/
 """ Credit to Strager https://github.com/strager/dotfiles
 """ Always show the status line
 set laststatus=2
-set noshowmatch
-set nosm
-let g:loaded_matchparen=1
 
 """ Filename [Help][-][RO]
 set statusline=\ \ \ %<%f\ %h%m%r
@@ -184,7 +184,7 @@ set statusline=\ \ \ %<%f\ %h%m%r
 """ Line, col
 set statusline+=%=%(%l,%c%V%)
 
-""" Showcmd
+""" Handle <ESC> immediately in insert mode
 set esckeys
 set notimeout ttimeout ttimeoutlen=0
 set showcmd

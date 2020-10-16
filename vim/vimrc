@@ -158,10 +158,6 @@ set listchars+=tab:⇥\
 set noai " Don't auto indent
 set nowrap "Don't wrap lines
 
-""" Moving around, tabs, windows and buffers
-""" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-
 """ Smart way to move between windows
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k

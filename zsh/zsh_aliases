@@ -2,7 +2,7 @@
 # Git
 alias gs="git status -s -b && git ql"
 alias gc="git commit -v"
-# alias g.c="git commit -am"
+alias g.c="git commit -am"
 alias g.="git add -p"
 alias gi="git add -i"
 alias g^="git push"
@@ -24,3 +24,4 @@ alias vi="vim"
 alias python="python3"
 alias pip="pip3"
 alias ls='ls --color=auto'
+alias gist-paste='gist'

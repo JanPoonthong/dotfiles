@@ -1,1 +1,9 @@
-/home/jan/.config/Code/User/settings.json
+{
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame"
+    ],
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 18,
+    "editor.wordWrapColumn": 60,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+}

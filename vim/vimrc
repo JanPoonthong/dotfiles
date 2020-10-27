@@ -149,8 +149,8 @@ set shiftwidth=4
 set tabstop=8
 set softtabstop=-1
 
-""" Linebreak on 60 characters
-set tw=60 cc=60
+""" Linebreak on characters
+set tw=79 cc=79
 set nojoinspaces
 set formatoptions=cloqr
 set listchars+=tab:⇥\

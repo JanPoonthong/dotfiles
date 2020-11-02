@@ -14,6 +14,7 @@ alias gp="git checkout -p"
 alias go="git checkout"
 alias gfp="git fetch && git pull"
 alias gar="git add --all"
+alias gl="git diff -C --stat HEAD"
 # alias ga="git commit --amend --reuse-message=HEAD"
 
 # Shortcut

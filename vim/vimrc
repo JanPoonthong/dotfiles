@@ -112,6 +112,9 @@ set rtp+=~/.fzf/
 """ Open files in current directory
 nnoremap <silent> <leader>F :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
 
+""" Open files in current directory
+nnoremap <silent> <leader>f :call fzf#run(fzf#wrap({'source': "find ."}))<cr>
+
 """ Open file from ~ on a new tab
 nnoremap <silent> <leader>b :call fzf#run({'source': "find ~", 'down': '40%', 'sink':'tabedit'})<cr>
 

@@ -1,6 +1,6 @@
 # Credit to Strager https://github.com/strager/dotfiles/
 # Git
-alias gs="git status -s -b && git ql"
+alias gs="git status -s -b && { git ql 2>/dev/null || : }"
 alias gc="git commit -v"
 alias g.c="git commit -am"
 alias g.="git add -p"

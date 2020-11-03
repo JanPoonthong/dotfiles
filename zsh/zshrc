@@ -42,6 +42,9 @@ _fix_cursor() {
 }
 precmd_functions+=(_fix_cursor)
 
+# => Completion
+unsetopt auto_remove_slash
+
 # => ls
 # Credit Strager https://github.com/strager/dotfiles
 zstyle ':completion:*' menu select

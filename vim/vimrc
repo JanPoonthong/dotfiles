@@ -157,6 +157,9 @@ set softtabstop=-1
 set tw=60 cc=60
 set nojoinspaces
 set formatoptions=cloqr
+set list
+set listchars=
+set listchars+=precedes:<,extends:>
 set listchars+=tab:⇥\
 
 set noai " Don't auto indent

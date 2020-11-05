@@ -1,20 +1,19 @@
 [user]
 	email = janpoonthong628@gmail.com
 	name = Jan \"jan\" Poonthong
+[push]
+	default = nothing
 [core]
         excludesfile = ~/.gitignore
 	editor = vim
-
 [alias]
 	co = checkout
 	l = log --color --graph --pretty=format:'%Cgreen%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C("#849598")<%an>%Creset' --abbrev-commit
 	ql = log --color --pretty=format:'%Cgreen%h%Creset%C(yellow)%d%Creset %s%Creset' --abbrev-commit -n5
 
-
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
-
 [merge]
         conflictstyle = diff3

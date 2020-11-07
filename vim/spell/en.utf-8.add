@@ -1,66 +1,11 @@
-# General programming terms.
-Bluetooth
-const
-constexpr
-deserialization
-deserialize
-deserializers
-devirtualization
+# General programming terms
+bluetooth
 dotfiles
-endif
 ethernet
 goto
 hackily
 laggy
-mutex
-namespaced
 pessimisation
-preemptable
-preemptions
 refactorings
 sudo
-typedef
-typename
-vimrc
 pseudocode
-
-# People.
-strager
-jan
-
-# Projects and products.
-CMake
-GCC
-GitHub/=
-GraphQL
-JSON
-NixOS
-gcc
-github/=
-linux
-macOS
-nixpkgs
-systemd
-zsh
-
-# Linux restartable sequence terms.
-abort_ip
-post_commit_ip
-start_ip
-
-# ELF assembly terms.
-globl
-progbits
-
-# Vim terms.
-quickfix
-
-# JavaScript terms.
-HTMLImageElement
-
-# Uncategorized terms.
-WebAssembly
-WASM
-emscripten
-quick-lint-js
-Node.js

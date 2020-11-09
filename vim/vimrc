@@ -109,16 +109,19 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 """ Adding the directory to runtimepath
 set rtp+=~/.fzf/
 
-""" Open files in current directory
+""" Open files in current directory in new tab
 nnoremap <silent> <leader>F :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
 
 """ Open files in current directory
 nnoremap <silent> <leader>f :call fzf#run(fzf#wrap({'source': "find ."}))<cr>
 
 """ Open file from ~ on a new tab
+"""nnoremap <silent> <leader>b :call fzf#run({'source': "find ~ -name '.*' -prune", 'down': '40%', 'sink':'tabedit'})<cr>
+
+""" Open file from ~ on a new tab
 nnoremap <silent> <leader>b :call fzf#run({'source': "find ~", 'down': '40%', 'sink':'tabedit'})<cr>
 
-""" Open file from ~ on the tab
+""" Open file from ~
 nnoremap <silent> <leader>s :call fzf#run(fzf#wrap({'source': "find ~"}))<cr>
 
 """ Open files in new tab in vim

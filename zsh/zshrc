@@ -2,7 +2,7 @@ fpath=(~/dotfiles/zsh/jan "${fpath[@]}")
 autoload -Uk strager_prompt_cwd
 
 source $HOME/dotfiles/zsh/zsh_aliases
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=vim
 # export PATH=~/Downloads/Discord:$PATH
@@ -30,7 +30,8 @@ bindkey '^I' menu-expand-or-complete
 setopt prompt_subst
 PROMPT=
 # Current directory.
-PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
+PROMPT=${PROMPT}"%F{93}%~%f"
+#PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
 # Exit code of previous command.
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 # Terminator.
@@ -76,6 +77,6 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="${_argument_style}"
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_error_style}"
 # Automatic completion.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

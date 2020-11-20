@@ -5,10 +5,6 @@ source $HOME/dotfiles/zsh/zsh_aliases
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=vim
-# export PATH=~/Downloads/Discord:$PATH
-export PATH=~/Downloads/node-v12.19.0-linux-x64/bin:$PATH
-# export PATH=~/Downloads/pycharm-community-2020.2.2/bin:$PATH
-
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000
 export HISTSIZE=1000000
@@ -30,8 +26,7 @@ bindkey '^I' menu-expand-or-complete
 setopt prompt_subst
 PROMPT=
 # Current directory.
-PROMPT=${PROMPT}"%F{93}%~%f"
-#PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
+PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
 # Exit code of previous command.
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 # Terminator.

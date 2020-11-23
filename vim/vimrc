@@ -23,6 +23,9 @@ autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescap
 """ Javascript shortcut
 autocmd FileType javascript map <buffer> <F9> <esc>:w<CR>:exec '!node' shellescape(@%, 1)<CR>
 
+""" Html shortcut
+autocmd FileType html map <buffer> <F9> <esc>:w<CR>:exec '!firefox' shellescape(@%, 1)<CR>
+
 """ VIM user interface
 """ Set number
 set relativenumber

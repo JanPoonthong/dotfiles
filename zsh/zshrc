@@ -30,7 +30,7 @@ PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
 # Exit code of previous command.
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 # Terminator.
-PROMPT="${PROMPT}> "
+PROMPT="${PROMPT}$ "
 
 # => Cursor
 _fix_cursor() {

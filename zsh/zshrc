@@ -12,6 +12,9 @@ export SAVEHIST=1000000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
+# Export to $PATH
+export PATH=$PATH:/home/jan/Downloads/node-v14.15.1-linux-x64/bin/
+
 # Command interpretation
 setopt CHASE_DOTS
 setopt INTERACTIVE_COMMENTS
@@ -40,6 +43,11 @@ precmd_functions+=(_fix_cursor)
 
 # => Completion
 unsetopt auto_remove_slash
+
+# => Title
+title() {
+    printf '\x1b]2;%s\x07' "${1}" # gnome-terminal
+}
 
 # => ls
 # Credit Strager https://github.com/strager/dotfiles

@@ -1,0 +1,5 @@
+# Credit @strager: https://github.com/strager/
+strager_set_block_cursor() {
+    strager_linux_softcursor_sequence 6 0 0
+    strager_gnome_terminal_cursor_sequence 2
+}

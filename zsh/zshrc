@@ -1,5 +1,11 @@
 fpath=(~/dotfiles/zsh/jan "${fpath[@]}")
 autoload -Uk strager_prompt_cwd
+autoload -Uk strager_linux_softcursor_sequence
+autoload -Uk strager_move_backward_shortword
+autoload -Uk strager_gnome_terminal_cursor_sequence
+autoload -Uk strager_set_block_cursor
+autoload -Uk strager_set_vertical_bar_cursor
+autoload -Uk strager_update_cursor_during_edit
 
 source $HOME/dotfiles/zsh/zsh_aliases
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -33,13 +39,19 @@ PROMPT="${PROMPT}%F{green}\$(strager_prompt_cwd)%f"
 # Exit code of previous command.
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 # Terminator.
-PROMPT="${PROMPT}$ "
+PROMPT="${PROMPT}> "
 
 # => Cursor
-_fix_cursor() {
-   echo -ne '\e[6 q'
+# Cursor style.
+PROMPT="${PROMPT}%{\$(strager_update_cursor_during_edit)%}"
+preexec_functions=("${preexec_functions[@]}" strager_set_block_cursor)
+zle-keymap-select() {
+    strager_update_cursor_during_edit
 }
-precmd_functions+=(_fix_cursor)
+#_fix_cursor() {
+#   echo -ne '\e[6 q'
+#}
+#precmd_functions+=(_fix_cursor)
 
 # => Completion
 unsetopt auto_remove_slash

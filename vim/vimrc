@@ -11,11 +11,14 @@ set viminfo+=:10000
 filetype plugin on
 filetype indent on
 
+""" General
+set nocompatible
+
 """ Load all plugins now.
 packloadall
 
 """ With a map leader it's possible to do extra key combinations
-let mapleader = ","
+let mapleader = "/"
 
 """ Python shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -29,6 +32,8 @@ autocmd FileType html map <buffer> <F9> <esc>:w<CR>:exec '!firefox' shellescape(
 """ VIM user interface
 """ Set number
 set relativenumber
+
+set clipboard=
 
 """ Set numberwidth
 set numberwidth=3
@@ -166,10 +171,11 @@ set formatoptions=cloqr
 set list
 set listchars=
 set listchars+=precedes:<,extends:>
-set listchars+=tab:⇥\
+set listchars+=tab:⇥\ 
 
 set noai " Don't auto indent
-set nowrap "Don't wrap lines
+set nowrap " Don't wrap lines
+set cin " C indent
 
 """ Smart way to move between windows
 nmap <C-j> <C-W>j

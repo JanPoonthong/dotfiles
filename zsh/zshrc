@@ -19,7 +19,8 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
 # Export to $PATH
-export PATH=$PATH:/home/jan/Downloads/node-v14.15.1-linux-x64/bin/
+export PATH=$PATH:/home/jan/Downloads/node-v14.15.1-linux-x64/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # Command interpretation
 setopt CHASE_DOTS

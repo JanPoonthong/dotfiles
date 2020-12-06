@@ -17,9 +17,6 @@ set nocompatible
 """ Load all plugins now.
 packloadall
 
-""" With a map leader it's possible to do extra key combinations
-let mapleader = "/"
-
 """ Python shortcut
 autocmd FileType python map <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 

@@ -26,6 +26,9 @@ autocmd FileType javascript map <buffer> <F1> <esc>:w<CR>:exec '!node' shellesca
 """ Html shortcut
 autocmd FileType html map <buffer> <F1> <esc>:w<CR>:exec '!firefox' shellescape(@%, 1)<CR>
 
+""" g++ shortcut
+autocmd Filetype cpp map <buffer> <F1> <esc>:w<CR>:exec '!g++' shellescape(@%, 1).' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+
 """ VIM user interface
 """ Set number
 set relativenumber

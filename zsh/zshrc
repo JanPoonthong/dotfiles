@@ -94,4 +94,5 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_error_style}"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

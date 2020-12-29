@@ -18,4 +18,21 @@ alias gar="git add --all ."
 # alias gl="git diff -C --stat HEAD"
 # alias ga="git commit --amend --reuse-message=HEAD"
 
+<<<<<<< HEAD
+||||||| 3e3c1bb
+# Shortcut
+#alias cd.="cd ../"
+#alias cd..="cd ../../"
+#alias cd...="cd ../../../"
+alias vi="vim"
+alias python="python3"
+alias pip="pip3"
+=======
+# Shortcut
+#alias cd.="cd ../"
+#alias cd..="cd ../../"
+#alias cd...="cd ../../../"
+alias vi="vim"
+alias pip="pip3"
+>>>>>>> 13b1da1d76cc1ce89f5ca94d6443c22ea8adf908
 alias ls="ls --color=auto"

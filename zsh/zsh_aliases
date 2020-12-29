@@ -1,4 +1,5 @@
 # Credit to Strager https://github.com/strager/dotfiles/
+
 # Git
 alias gs="git status -s -b && { git ql 2>/dev/null || : }"
 alias gc="git commit -v"
@@ -17,13 +18,4 @@ alias gar="git add --all ."
 # alias gl="git diff -C --stat HEAD"
 # alias ga="git commit --amend --reuse-message=HEAD"
 
-# Shortcut
-#alias cd.="cd ../"
-#alias cd..="cd ../../"
-#alias cd...="cd ../../../"
-alias vi="vim"
-alias python="python3"
-alias pip="pip3"
 alias ls="ls --color=auto"
-#alias 'gist'="gist-paste -p"
-alias run="firefox"

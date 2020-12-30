@@ -1,7 +1,6 @@
 sudo apt install flake8
 sudo apt install cmake
 sudo apt install ninja-build
-sudo apt install pylint
 sudo apt install htop
 sudo apt install zsh
 sudo apt install tree

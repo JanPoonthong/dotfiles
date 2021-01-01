@@ -1,16 +1,12 @@
 # Credit to Strager https://github.com/strager/dotfiles/
 
 # Git
-alias gs="git status -s -b && git log -n 5 --oneline"
+alias gs="git status -s -b && { git ql 2>/dev/null || : }"
 alias gc="git commit -v"
+alias g.c="git commit -am"
 alias g.="git add -p"
-alias gi="git add -i"
-alias g^="git push"
-alias gl="git log --stat"
+alias gr="git rebase"
 alias gd="git diff"
-alias gfp="git fetch && git pull"
-
-# Shortcut
-alias cd.="cd ../"
-alias cd..="cd ../../"
-alias cd...="cd ../../../"
+alias gdd="git diff --cached"
+alias gp="git checkout -p"
+alias gar="git add --all ."

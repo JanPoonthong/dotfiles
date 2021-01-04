@@ -17,3 +17,4 @@ sudo apt install libpq-dev
 sudo apt install vim-gtk
 sudo apt install sqlite3
 sudo apt install python3
+sudo apt install libsdl2-dev

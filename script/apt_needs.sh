@@ -18,3 +18,4 @@ sudo apt install vim-gtk
 sudo apt install sqlite3
 sudo apt install python3
 sudo apt install libsdl2-dev
+sudo apt install mpg123

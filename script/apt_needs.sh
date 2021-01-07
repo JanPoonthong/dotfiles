@@ -15,6 +15,3 @@ sudo apt install sqlite3
 sudo apt install python3
 sudo apt install mpg123
 sudo apt install ffmpeg
-sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt update
-sudo apt install obs-studio

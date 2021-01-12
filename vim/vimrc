@@ -118,7 +118,8 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 set rtp+=~/.fzf/
 
 """ Open files in current directory in new tab
-nnoremap <silent> <leader>f :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
+nmap <silent> <leader>b :FZF<cr>
+""" nnoremap <silent> <leader>b :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
 
 """ Open files in current directory
 """ nnoremap <silent> <leader>f :call fzf#run(fzf#wrap({'source': "find ."}))<cr>

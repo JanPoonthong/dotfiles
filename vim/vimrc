@@ -122,6 +122,7 @@ nnoremap <silent> <leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<cr
 """ nnoremap <silent> <leader>b :call fzf#run({'source': "find .", 'down': '40%', 'sink':'tabedit'})<cr>
 
 """ Open files in current directory
+nmap <C-p> :FZF<cr>
 """ nnoremap <silent> <leader>f :call fzf#run(fzf#wrap({'source': "find ."}))<cr>
 
 """ Open file from ~ on a new tab

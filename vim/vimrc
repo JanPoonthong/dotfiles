@@ -1,4 +1,5 @@
 """  General
+
 """ Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 scriptencoding utf-8
@@ -11,6 +12,7 @@ set viminfo+=:10000
 filetype plugin on
 filetype indent on
 
+
 """ General
 set nocompatible
 
@@ -20,10 +22,12 @@ autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescap
 """ g++ shortcut
 autocmd Filetype cpp map <buffer> <F1> <esc>:w<CR>:exec '!g++' shellescape(@%, 1).' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
+
 """ VIM user interface
 """ Set number
 set relativenumber
 
+""" Clipboard
 set clipboard=
 
 """ Set numberwidth

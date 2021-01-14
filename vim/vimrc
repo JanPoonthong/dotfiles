@@ -11,9 +11,6 @@ set viminfo+=:10000
 """ Enable filetype plugins
 filetype plugin on
 filetype indent on
-
-
-""" General
 set nocompatible
 
 """ Python shortcut

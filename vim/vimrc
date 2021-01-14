@@ -114,7 +114,6 @@ set tabstop=8
 set softtabstop=-1
 
 """ Linebreak on characters
-set tw=60 cc=60
 set nojoinspaces
 set formatoptions=cloqr
 set list

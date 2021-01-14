@@ -1,5 +1,4 @@
 """  General
-
 """ Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 scriptencoding utf-8
@@ -131,6 +130,17 @@ set splitbelow splitright
 
 """ Useful mappings for managing tabs
 map <leader>c :tabclose<cr>
+
+""" Moveing tab in vim
+let s:i = 1
+while s:i <= 10
+  execute printf(
+    \ 'nnoremap <unique> <Leader>%d :%dtabnext<CR>',
+    \ s:i == 10 ? 0 : s:i,
+    \ s:i,
+  \ )
+  let s:i += 1
+endwhile
 
 """ Swap
 """ Save swap file in ~/.vim/swap/

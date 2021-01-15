@@ -11,5 +11,8 @@ setopt AUTOCD
 
 PROMPT='%F{082}%~> '
 
+bindkey '^I' menu-expand-or-complete
+zstyle ':completion:*' menu select
+
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

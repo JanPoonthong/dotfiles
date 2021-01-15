@@ -13,3 +13,6 @@
 [submodule "vim/pack/git-plugins/start/fzf"]
 	path = vim/pack/git-plugins/start/fzf
 	url = git@github.com:junegunn/fzf.git
+[submodule "vim/color/vim-colors-solarized"]
+	path = vim/color/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git

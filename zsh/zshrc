@@ -1,0 +1,15 @@
+source ~/dotfiles/zsh/zsh_aliases
+
+export EDITOR=vim
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+setopt HIST_IGNORE_ALL_DUPS
+
+bindkey '^I' menu-expand-or-complete
+
+PROMPT='%F{082}%~> '
+
+source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -9,7 +9,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 setopt AUTOCD
 
-PROMPT='%F{green}%~> '
+PROMPT='%F{82}%~%(0?;; %F{red}%?%f)> '
 
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

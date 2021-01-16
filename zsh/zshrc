@@ -13,3 +13,5 @@ PROMPT='%F{80}%~%(0?;; %F{red}%?%f)> '
 
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

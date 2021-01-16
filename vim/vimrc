@@ -21,7 +21,7 @@ autocmd Filetype cpp map <buffer> <F1> <esc>:w<CR>:exec '!g++' shellescape(@%, 1
 
 """ VIM user interface
 """ Vimgrep
-command -nargs=+ Grep :vimgrep "<args>" * | copen
+command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
 """ Set number
 set relativenumber
@@ -97,10 +97,10 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 set rtp+=~/.fzf/
 
 """ Open files in current directory in new tab
-nnoremap <silent> <leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<cr>
+nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
 
 """ Open files in current directory
-nmap <C-p> :FZF<cr>
+nmap <unique> <C-P> :FZF <CR>
 
 """ Text, tab and indent related
 """ Use spaces instead of tabs

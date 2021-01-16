@@ -136,6 +136,9 @@ set splitbelow splitright
 """ Useful mappings for managing tabs
 map <leader>c :tabclose<cr>
 
+"" Line on 60
+set tw=60 cc=60
+
 """ Moveing tab in vim
 let s:i = 1
 while s:i <= 10

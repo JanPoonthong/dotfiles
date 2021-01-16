@@ -20,6 +20,9 @@ autocmd Filetype cpp map <buffer> <F1> <esc>:w<CR>:exec '!g++' shellescape(@%, 1
 
 
 """ VIM user interface
+""" Vimgrep
+command -nargs=+ Grep :vimgrep "<args>" * | copen
+
 """ Set number
 set relativenumber
 

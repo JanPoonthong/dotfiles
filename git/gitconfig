@@ -4,3 +4,5 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+[alias]
+	ql = log --pretty=format:'%Cblue%h%Creset%C(red)%d%Creset %s%Creset' -n5

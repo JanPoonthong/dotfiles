@@ -7,9 +7,21 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 setopt HIST_IGNORE_ALL_DUPS
 
+setopt CHASE_DOTS
+setopt INTERACTIVE_COMMENTS
 setopt AUTOCD
 
+bindkey '^I' menu-expand-or-complete
+
+unsetopt auto_remove_slash
+
+zstyle ':completion:*' menu select
+
 PROMPT='%F{80}%~%(0?;; %F{red}%?%f)> '
+
+title() {
+    printf '\x1b]2;%s\x07' "${1}" # gnome-terminal
+}
 
 source ~/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

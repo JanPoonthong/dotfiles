@@ -136,6 +136,11 @@ set splitbelow splitright
 """ Useful mappings for managing tabs
 map <leader>c :tabclose<cr>
 
+""" Terminal window title
+set title
+set titlestring=%t
+set titleold=
+
 "" Line on 60
 set tw=60 cc=60
 
@@ -164,4 +169,9 @@ set statusline=\ \ \ %<%f\ %h%m%r
 """ Line, col
 set statusline+=%=%(%l,%c%V%)
 
+""" Handle <ESC> immediately in insert mode
+set esckeys
+set notimeout ttimeout ttimeoutlen=0
 set showcmd
+
+set exrc secure

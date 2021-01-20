@@ -14,7 +14,7 @@ zstyle ':completion:*' menu select
 
 setopt prompt_subst
 PROMPT=
-PROMPT="${PROMPT}%F{green}%~"
+PROMPT="${PROMPT}%F{green}%~%f"
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
 PROMPT="${PROMPT}$ "
 

@@ -77,3 +77,13 @@ set list
 set listchars=
 set listchars+=precedes:<,extends:>
 set listchars+=tab:⇥\
+
+" ALE
+let g:ale_set_signs = 0
+let g:ale_lint_delay = 0
+let g:ale_set_highlights = 1
+let g:ale_lint_on_text_changed = 'always'
+
+" Underline the ALE with red color
+highlight ALEError ctermbg=none ctermfg=red cterm=underline
+highlight ALEWarning ctermbg=none ctermfg=red cterm=underline

@@ -14,11 +14,8 @@ zstyle ':completion:*' menu select
 
 setopt prompt_subst
 PROMPT=
-# Current directory.
 PROMPT="${PROMPT}%F{green}%~"
-# Exit code of previous command.
 PROMPT="${PROMPT}%(0?;; %F{red}%?%f)"
-# Terminator.
 PROMPT="${PROMPT}$ "
 
 title() {

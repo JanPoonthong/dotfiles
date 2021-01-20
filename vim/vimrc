@@ -1,177 +1,79 @@
-"""  General
-""" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-scriptencoding utf-8
+" Sets how many lines of history VIM has to remember
+set history=500
 
-""" Sets how many lines of history VIM has to remember
-set history=10000
-set viminfo+=:10000
-
-""" Enable filetype plugins
-filetype plugin on
-filetype indent on
-set nocompatible
-
-""" Python shortcut
-autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
-""" g++ shortcut
-autocmd Filetype cpp map <buffer> <F1> <esc>:w<CR>:exec '!g++' shellescape(@%, 1).' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-
-
-""" VIM user interface
-""" Vimgrep
+" Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
-""" Set number
+" Set number
 set relativenumber
 
-""" Clipboard
-set clipboard=
+"" Line on 80
+set tw=80 cc=80
 
-""" Set numberwidth
-set numberwidth=3
-set nostartofline
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
 
-""" Set 5 lines to the cursor
-set sidescroll=5
-set scrolloff=5
+" Set 5 lines to the cursor - when moving vertically using j/k
+set so=5
 
-""" Turn on the Wild menu
-set wildmenu
-set wildmode=longest,full
-
-""" Always show current position
+"Always show current position
 set ruler
 
-""" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set completeopt=menu,preview
-
-""" Ignore case when searching
+" Ignore case when searching
 set ignorecase
 
-""" When searching try to be smart about cases
+" When searching try to be smart about cases
 set smartcase
 
-""" Highlight search results
+" Highlight search results
 set hlsearch
 
-""" Unhighlight search results
-nmap <silent> <unique> <Leader>l :nohlsearch<CR>
-
-""" Makes search act like search in modern browsers
+" Makes search act like search in modern browsers
 set incsearch
 
-""" Save searches
-set viminfo+=/200
-
-""" Disable match {} () []
-set noshowmatch
-set nosm
-let g:loaded_matchparen=1
-
-
-""" Colors and Fonts
-""" Enable syntax highlighting
+" Enable syntax highlighting
 syntax enable
+colorscheme desert
 set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized
 
-
-""" ALE
-""" Linting
-let g:ale_set_signs = 0
-let g:ale_lint_delay = 0
-let g:ale_set_highlights = 1
-let g:ale_lint_on_text_changed = 'always'
-
-""" Underline the ALE with red color
-highlight ALEError ctermbg=none ctermfg=red cterm=underline
-highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
-
-
-""" Fzf
-""" Adding the directory to runtimepath
-set rtp+=~/.fzf/
-
-""" Open files in current directory in new tab
-nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
-
-""" Open files in current directory
-nmap <unique> <C-P> :FZF <CR>
-
-""" Text, tab and indent related
-""" Use spaces instead of tabs
+" Use spaces instead of tabs
 set expandtab
 
-""" No smartindent
-set nosmartindent
+" Be smart when using tabs
+set smarttab
 
-""" 1 tab == 4 spaces
+" 1 tab == 4 spaces
 set shiftwidth=4
-set tabstop=8
-set softtabstop=-1
+set tabstop=4
 
-""" Linebreak on characters
-set nojoinspaces
-set formatoptions=cloqr
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>tc :tabclose<cr>
+
+" Always show the status line
+set laststatus=2
+
+" Fzf
+set rtp+=~/.fzf/
+
+" Open files in current directory in new tab
+nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
+
+" Open files in current directory
+nmap <unique> <C-P> :FZF <CR>
+
 set list
 set listchars=
 set listchars+=precedes:<,extends:>
-set listchars+=tab:⇥\ 
-
-set noai " Don't auto indent
-set nowrap " Don't wrap lines
-set cin " C indent
-
-""" Smart way to move between windows
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-h> <C-W>h
-nmap <C-l> <C-W>l
-set splitbelow splitright
-
-""" Useful mappings for managing tabs
-map <leader>c :tabclose<cr>
-
-""" Terminal window title
-set title
-set titlestring=%t
-set titleold=
-
-"" Line on 60
-set tw=60 cc=60
-
-""" Moveing tab in vim
-let s:i = 1
-while s:i <= 10
-  execute printf(
-    \ 'nnoremap <unique> <Leader>%d :%dtabnext<CR>',
-    \ s:i == 10 ? 0 : s:i,
-    \ s:i,
-  \ )
-  let s:i += 1
-endwhile
-
-""" Swap
-""" Save swap file in ~/.vim/swap/
-set directory=~/.vim/swap/
-
-""" Status line
-""" Always show the status line
-set laststatus=2
-
-""" Filename [Help][-][RO]
-set statusline=\ \ \ %<%f\ %h%m%r
-
-""" Line, col
-set statusline+=%=%(%l,%c%V%)
-
-""" Handle <ESC> immediately in insert mode
-set esckeys
-set notimeout ttimeout ttimeoutlen=0
-set showcmd
-
-set exrc secure
+set listchars+=tab:⇥\

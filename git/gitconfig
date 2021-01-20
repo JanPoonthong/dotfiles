@@ -4,6 +4,3 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-[alias]
-	ql = log --pretty=format:'%Cblue%h%Creset%C(yellow)%d%Creset %s%Creset' -n5
-	co = checkout

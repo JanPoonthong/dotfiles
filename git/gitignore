@@ -2,6 +2,9 @@
 __pycache__
 db.sqlite3
 
+# Vim
+.netrwhist
+
 # Editor
 .idea/
 .vscode/

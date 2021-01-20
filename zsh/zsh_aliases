@@ -1,5 +1,0 @@
-alias gs="git status -s -b && git ql"
-alias gc="git commit -v"
-alias g.="git add -p"
-alias gar="git add --all"
-alias ls='ls --color=auto'

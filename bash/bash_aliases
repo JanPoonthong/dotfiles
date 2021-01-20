@@ -1,2 +1,3 @@
 alias gs='git status'
 alias gc='git commit -v'
+alias g.="git add -p"

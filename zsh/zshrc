@@ -12,7 +12,7 @@ setopt AUTOCD
 bindkey '^I' menu-expand-or-complete
 zstyle ':completion:*' menu select
 
-PROMPT='%F{80}%~%(0?;; %F{red}%?%f)> '
+PROMPT='%F{green}%~%(0?;; %F{red}%?%f)> '
 
 title() {
     printf '\x1b]2;%s\x07' "${1}" # gnome-terminal

@@ -42,7 +42,7 @@ set incsearch
 
 " Enable syntax highlighting
 syntax enable
-colorscheme desert
+colorscheme solarized
 set background=dark
 
 " Use spaces instead of tabs

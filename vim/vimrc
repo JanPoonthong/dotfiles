@@ -4,7 +4,17 @@ set history=500
 " Terminal window title
 set title
 set titlestring=%t
-set titleold=
+
+" Disable match {} () []
+set noshowmatch
+set nosm
+let g:loaded_matchparen=1
+
+" Unhighlight search results
+nmap <silent> <unique> <Leader>l :nohlsearch<CR>
+
+" Run python shortcut
+autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
@@ -101,3 +111,16 @@ while s:i <= 10
   \ )
   let s:i += 1
 endwhile
+
+" Filename [Help][-][RO]
+set statusline=\ \ \ %<%f\ %h%m%r
+
+" Line, col
+set statusline+=%=%(%l,%c%V%)
+
+" Handle <ESC> immediately in insert mode
+set esckeys
+set notimeout ttimeout ttimeoutlen=0
+set showcmd
+
+set exrc secure

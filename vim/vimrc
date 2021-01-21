@@ -4,6 +4,9 @@ set history=500
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
+" Turn on the Wild menu
+set wildmenu
+
 " Set number
 set relativenumber
 

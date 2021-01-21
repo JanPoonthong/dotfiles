@@ -81,11 +81,6 @@ nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
 " Open files in current directory
 nmap <unique> <C-P> :FZF <CR>
 
-set list
-set listchars=
-set listchars+=precedes:<,extends:>
-set listchars+=tab:⇥\
-
 " ALE
 let g:ale_set_signs = 0
 let g:ale_lint_delay = 0

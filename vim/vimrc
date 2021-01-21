@@ -1,6 +1,11 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" Terminal window title
+set title
+set titlestring=%t
+set titleold=
+
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 

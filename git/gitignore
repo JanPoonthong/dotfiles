@@ -4,6 +4,7 @@ db.sqlite3
 
 # Vim
 .netrwhist
+.swp
 
 # Editor
 .idea/

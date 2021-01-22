@@ -112,6 +112,9 @@ while s:i <= 10
   let s:i += 1
 endwhile
 
+" Save swap file in ~/.vim/swap/
+set directory=~/.vim/swap/
+
 " Filename [Help][-][RO]
 set statusline=\ \ \ %<%f\ %h%m%r
 

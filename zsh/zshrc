@@ -1,0 +1,39 @@
+source ~/dotfiles/zsh/zsh_aliases
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+setopt HIST_SAVE_NO_DUPS
+setopt autocd
+setopt INTERACTIVE_COMMENTS
+
+export EDITOR="vim"
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+zstyle ':completion:*' menu select
+eval "$(dircolors)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+bindkey '^I' menu-expand-or-complete
+
+PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)$ "
+
+title() {
+    printf '\x1b]2;%s\x07' "${1}"
+}
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+_cyan='fg=cyan'
+_light_blue='fg=39'
+_red='fg=red'
+ZSH_HIGHLIGHT_STYLES[arg0]="${_cyan}"
+ZSH_HIGHLIGHT_STYLES[command]="${_cyan},underline"
+ZSH_HIGHLIGHT_STYLES[comment]='fg=10'
+ZSH_HIGHLIGHT_STYLES[default]="${_light_blue}"
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]="${_red}"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]="${_red}"
+ZSH_HIGHLIGHT_STYLES[path]="${_light_blue},underline"
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=93'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="${_light_blue}"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_red}"

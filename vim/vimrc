@@ -52,8 +52,9 @@ set incsearch
 
 " Enable syntax highlighting
 syntax enable
-colorscheme solarized
 set background=dark
+let g:solarized_termtrans=1
+colorscheme solarized
 
 " Use spaces instead of tabs
 set expandtab

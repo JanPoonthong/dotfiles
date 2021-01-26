@@ -5,6 +5,3 @@ alias ga='git add -p'
 
 # ls
 alias ls='ls --color=auto'
-
-# Grep
-alias grep='grep --color=auto'

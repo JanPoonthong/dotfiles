@@ -10,3 +10,6 @@
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/pack/git-plugins/start/fzf"]
+	path = vim/pack/git-plugins/start/fzf
+	url = git@github.com:junegunn/fzf.git

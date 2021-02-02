@@ -68,6 +68,7 @@ set tabstop=4
 
 set noai "Do not auto indent
 set nowrap "Do not wrap lines
+set cin "Do C indent
 
 " Smart way to move between windows
 map <C-j> <C-W>j

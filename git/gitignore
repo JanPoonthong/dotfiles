@@ -1,5 +1,7 @@
 # Python 
 __pycache__
+
+# Django
 db.sqlite3
 
 # Vim

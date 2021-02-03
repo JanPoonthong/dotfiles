@@ -1,1 +1,1 @@
-sudo apt install gimp nodejs vlc pngcrush flake8 htop zsh tree xclip ncdu git python3-pygame python3-tk python3-venv python3-pip vim libpq-dev vim-gtk sqlite3 mpg123 ffmpeg cmake ninja-build build-essential
+sudo apt install libsdl2-dev pkg-config gimp nodejs vlc pngcrush flake8 htop zsh tree xclip ncdu git python3-pygame python3-tk python3-venv python3-pip vim libpq-dev vim-gtk sqlite3 mpg123 ffmpeg cmake ninja-build build-essential

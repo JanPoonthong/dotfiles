@@ -13,8 +13,11 @@ let g:loaded_matchparen=1
 " Unhighlight search results
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
-" Run python shortcut
+" Run Python shortcut
 autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+" Run GCC shortcut
+autocmd Filetype c map <buffer> <F1> <esc>:w<CR>:exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen

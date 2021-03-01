@@ -69,9 +69,19 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
+" Dislpay
+set list
+set listchars=
+set listchars+=precedes:<,extends:>
+set listchars+=tab:⇥\ 
+
+" Spelling
+set spellcapcheck=
+
 set noai "Do not auto indent
 set nowrap "Do not wrap lines
-set cin "Do C indent
+set nosmartindent
+set nojoinspaces
 set backspace=indent,eol,start
 
 " Smart way to move between windows

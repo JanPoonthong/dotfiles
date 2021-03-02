@@ -1,5 +1,12 @@
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+scriptencoding utf-8
+
 " Sets how many lines of history VIM has to remember
 set history=500
+
+set nocompatible
+packloadall
 
 " Terminal window title
 set title
@@ -59,15 +66,13 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=8
+set softtabstop=-1
+
 " Use spaces instead of tabs
 set expandtab
-
-" Be smart when using tabs
-set smarttab
-
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
 
 " Dislpay
 set list
@@ -82,7 +87,13 @@ set noai "Do not auto indent
 set nowrap "Do not wrap lines
 set nosmartindent
 set nojoinspaces
+set numberwidth=3
+set nostartofline
+set formatoptions=cloqr
+
+" Configure backspace
 set backspace=indent,eol,start
+set completeopt=menu,preview
 
 " Smart way to move between windows
 map <C-j> <C-W>j

@@ -26,6 +26,10 @@ autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescap
 " Run GCC shortcut
 autocmd Filetype c map <buffer> <F1> <esc>:w<CR>:exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
+" Spell check
+set spell
+nmap <silent> <unique> <Leader>m :highlight SpellBad ctermbg=none ctermfg=red cterm=underline<CR>
+
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
@@ -79,9 +83,6 @@ set list
 set listchars=
 set listchars+=precedes:<,extends:>
 set listchars+=tab:⇥\ 
-
-" Spelling
-set spellcapcheck=
 
 set noai "Do not auto indent
 set nowrap "Do not wrap lines

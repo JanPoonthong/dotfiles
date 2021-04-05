@@ -144,6 +144,9 @@ while s:i <= 10
   let s:i += 1
 endwhile
 
+" Quick-lint-js
+exe 'set rtp+=' . expand('/usr/share/vim/addons')
+
 " Save swap file in ~/.vim/swap/
 set directory=~/.vim/swap/
 

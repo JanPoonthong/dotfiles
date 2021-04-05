@@ -70,31 +70,8 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=8
-set softtabstop=-1
-
 " Use spaces instead of tabs
 set expandtab
-
-" Dislpay
-set list
-set listchars=
-set listchars+=precedes:<,extends:>
-set listchars+=tab:⇥\ 
-
-set noai "Do not auto indent
-set nowrap "Do not wrap lines
-set nosmartindent
-set nojoinspaces
-set numberwidth=3
-set nostartofline
-set formatoptions=cloqr
-
-" Configure backspace
-set backspace=indent,eol,start
-set completeopt=menu,preview
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -132,7 +109,31 @@ let &t_SI.="\e[6 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 
-" Change tab in vim from @strager
+" Everything from here to below is from -> @strager: https://github.com/strager
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=8
+set softtabstop=-1
+
+" Dislpay
+set list
+set listchars=
+set listchars+=precedes:<,extends:>
+set listchars+=tab:⇥\ 
+
+set noai "Do not auto indent
+set nowrap "Do not wrap lines
+set nosmartindent
+set nojoinspaces
+set numberwidth=3
+set nostartofline
+set formatoptions=cloqr
+
+" Configure backspace
+set backspace=indent,eol,start
+set completeopt=menu,preview
+
+" Change tab in vim
 let s:i = 1
 while s:i <= 10
   execute printf(

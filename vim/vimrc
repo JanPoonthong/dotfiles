@@ -23,6 +23,9 @@ nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 " Run Python shortcut
 autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" Run Node shortcut
+autocmd FileType javascript map <buffer> <F1> <esc>:w<CR>:exec '!node' shellescape(@%, 1)<CR>
+
 " Run GCC shortcut
 autocmd Filetype c map <buffer> <F1> <esc>:w<CR>:exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 

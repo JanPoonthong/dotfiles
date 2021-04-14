@@ -30,8 +30,8 @@ autocmd FileType javascript map <buffer> <F1> <esc>:w<CR>:exec '!node' shellesca
 autocmd Filetype c map <buffer> <F1> <esc>:w<CR>:exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
 " Spell check
-set spell
-nmap <silent> <unique> <Leader>m :highlight SpellBad ctermbg=none ctermfg=red cterm=underline<CR>
+" set spell
+" nmap <silent> <unique> <Leader>m :highlight SpellBad ctermbg=none ctermfg=red cterm=underline<CR>
 
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
@@ -110,7 +110,7 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 let &t_SI.="\e[6 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
+let &t_EI.="\e[2 q" "EI = NORMAL mode
 
 " Everything from here to below is from -> @strager: https://github.com/strager
 " 1 tab == 4 spaces

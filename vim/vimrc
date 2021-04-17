@@ -123,3 +123,4 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 " Line, col
 set statusline+=%=%(%l,%c%V%)
+set showcmd

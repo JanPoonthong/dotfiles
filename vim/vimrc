@@ -5,20 +5,13 @@ set smartcase
 set hlsearch
 set incsearch
 set tw=80 cc=80
+set history=500
 
 filetype plugin on
 filetype indent on
 
-set history=500
-
-set noshowmatch
-set nosm
-let g:loaded_matchparen=1
-
 autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
-
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
 set wildmenu
@@ -32,13 +25,13 @@ set softtabstop=4
 set showcmd
 set exrc
 set noerrorbells
+let g:loaded_matchparen=1
 
 set rtp+=~/.fzf/
 nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
 nmap <unique> <C-P> :call fzf#run({'sink': 'edit', 'down': '40%'})<CR>
 
 " Everything from here to below is from -> @strager: https://github.com/strager
-" Dislpay
 set list
 set listchars=
 set listchars+=precedes:<,extends:>
@@ -59,7 +52,6 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" Change tab in vim
 let s:i = 1
 while s:i <= 10
   execute printf(
@@ -80,13 +72,11 @@ highlight ALEError ctermbg=none ctermfg=red cterm=underline
 highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 set directory=~/.vim/swap/
-set statusline+=%=%(%l,%c%V%) "Line, col
 set statusline=\ \ \ %<%f\ %m "Filename [-]
+set statusline+=%=%(%l,%c%V%) "Line, col
 
-" Terminal window title
 set title
 set titlestring=%t
 
-" Handle esc fast
 set esckeys
 set notimeout ttimeout ttimeoutlen=0

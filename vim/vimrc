@@ -123,4 +123,8 @@ highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
 
 " Line, col
 set statusline+=%=%(%l,%c%V%)
+
+" Handle esc fast
+set esckeys
+set notimeout ttimeout ttimeoutlen=0
 set showcmd

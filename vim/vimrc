@@ -26,7 +26,12 @@ set relativenumber
 set expandtab
 set laststatus=2
 set shiftwidth=4 "1 tab == 4 spaces
-set softtabstop=-1
+set tabstop=4
+set softtabstop=4
+
+set showcmd
+set exrc
+set noerrorbells
 
 set rtp+=~/.fzf/
 nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
@@ -85,4 +90,3 @@ set titlestring=%t
 " Handle esc fast
 set esckeys
 set notimeout ttimeout ttimeoutlen=0
-set showcmd

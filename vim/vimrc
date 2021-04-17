@@ -1,12 +1,5 @@
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-scriptencoding utf-8
-
 " Sets how many lines of history VIM has to remember
 set history=500
-
-set nocompatible
-packloadall
 
 " Terminal window title
 set title
@@ -22,16 +15,6 @@ nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
 " Run Python shortcut
 autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
-" Run Node shortcut
-autocmd FileType javascript map <buffer> <F1> <esc>:w<CR>:exec '!node' shellescape(@%, 1)<CR>
-
-" Run GCC shortcut
-autocmd Filetype c map <buffer> <F1> <esc>:w<CR>:exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-
-" Spell check
-" set spell
-" nmap <silent> <unique> <Leader>m :highlight SpellBad ctermbg=none ctermfg=red cterm=underline<CR>
 
 " Vimgrep
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
@@ -76,16 +59,6 @@ colorscheme solarized
 " Use spaces instead of tabs
 set expandtab
 
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>tc :tabclose<cr>
-
 " Always show the status line
 set laststatus=2
 
@@ -96,26 +69,10 @@ set rtp+=~/.fzf/
 nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
 
 " Open files in current directory
-nmap <unique> <C-P> :FZF <CR>
+nmap <unique> <C-P> :call fzf#run({'sink': 'edit', 'down': '40%'})<CR>
 
-" ALE
-let g:ale_set_signs = 0
-let g:ale_lint_delay = 0
-let g:ale_set_highlights = 1
-let g:ale_lint_on_text_changed = 'always'
-
-" Underline the ALE with red color
-highlight ALEError ctermbg=none ctermfg=red cterm=underline
-highlight ALEWarning ctermbg=none ctermfg=red cterm=underline
-
-let &t_SI.="\e[6 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[2 q" "EI = NORMAL mode
-
-" Everything from here to below is from -> @strager: https://github.com/strager
 " 1 tab == 4 spaces
 set shiftwidth=4
-set tabstop=8
 set softtabstop=-1
 
 " Dislpay
@@ -147,21 +104,11 @@ while s:i <= 10
   let s:i += 1
 endwhile
 
-"Quick-lint-js
-set rtp+=/usr/share/vim/addons
-
 " Save swap file in ~/.vim/swap/
 set directory=~/.vim/swap/
 
-" Filename [Help][-][RO]
-set statusline=\ \ \ %<%f\ %h%m%r
+" Filename [-]
+set statusline=\ \ \ %<%f\ %m
 
 " Line, col
 set statusline+=%=%(%l,%c%V%)
-
-" Handle <ESC> immediately in insert mode
-set esckeys
-set notimeout ttimeout ttimeoutlen=0
-set showcmd
-
-set exrc secure

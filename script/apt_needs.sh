@@ -1,1 +1,1 @@
-sudo apt install nasm cloc ripgrep clang traceroute audacity pylint libsdl2-dev pkg-config gimp vlc pngcrush flake8 htop zsh tree xclip ncdu git python3-pygame python3-tk python3-venv python3-pip libpq-dev sqlite3 mpg123 ffmpeg cmake ninja-build build-essential
+sudo apt install ripgrep gimp flake8 htop zsh tree xclip ncdu git python3-venv python3-pip sqlite3

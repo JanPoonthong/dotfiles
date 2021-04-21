@@ -1,4 +1,5 @@
 set so=5
+set nowrap
 set hlsearch
 set incsearch
 set tw=80 cc=80
@@ -31,7 +32,7 @@ set backspace=indent,eol,start
 
 syntax enable
 set background=dark
-colorscheme desert
+colorscheme solarized
 
 let s:i = 1
 while s:i <= 10

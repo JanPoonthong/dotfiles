@@ -40,5 +40,6 @@ ZSH_HIGHLIGHT_STYLES[path]="${_light_blue},underline"
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=93'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="${_light_blue}"
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]="${_red}"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

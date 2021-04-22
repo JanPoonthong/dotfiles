@@ -16,6 +16,7 @@ set relativenumber
 set laststatus=2
 set shiftwidth=4 "1 tab == 4 spaces
 set tabstop=4
+set expandtab
 set softtabstop=4
 
 set showcmd

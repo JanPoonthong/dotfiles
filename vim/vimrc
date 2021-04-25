@@ -1,32 +1,34 @@
-set so=5
+set scrolloff=5
 set nowrap
 set hlsearch
 set incsearch
-set tw=80 cc=80
+set textwidth=80 colorcolumn=80
 
 filetype plugin on
 filetype indent on
 
-autocmd FileType python map <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python nmap <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
+
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
 set wildmenu
 set relativenumber
 set laststatus=2
-set shiftwidth=4 "1 tab == 4 spaces
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
+
+set list
+set listchars=tab:⇥\ 
 
 set showcmd
-set exrc
-set noerrorbells
 let g:loaded_matchparen=1
 
 set rtp+=~/.fzf/
-nmap <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
-nmap <unique> <C-P> :call fzf#run({'sink': 'edit', 'down': '40%'})<CR>
+nmap <silent> <unique> <Leader>b :call fzf#run({'sink': 'tabedit', 'down': '40%'})<CR>
+nmap <silent> <unique> <C-P> :call fzf#run({'sink': 'edit', 'down': '40%'})<CR>
 
 set numberwidth=3
 set backspace=indent,eol,start
@@ -45,7 +47,7 @@ while s:i <= 10
   let s:i += 1
 endwhile
 
-set rtp+=/usr/share/vim/addons "Quick-lint-js
+set rtp+=/usr/share/vim/addons " Quick-lint-js
 
 let g:ale_set_signs = 0
 let g:ale_lint_delay = 0

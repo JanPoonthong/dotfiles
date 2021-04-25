@@ -47,7 +47,7 @@ while s:i <= 10
   let s:i += 1
 endwhile
 
-set rtp+=/usr/share/vim/addons " Quick-lint-js
+set rtp+=/usr/share/vim/addons "Quick-lint-js
 
 let g:ale_set_signs = 0
 let g:ale_lint_delay = 0

@@ -11,16 +11,16 @@ setopt INTERACTIVE_COMMENTS
 
 export EDITOR="vim"
 export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=10000
-export SAVEHIST=10000
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 zstyle ':completion:*' menu select
 eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-bindkey '^I' menu-expand-or-complete
+# bindkey '^I' menu-expand-or-complete
 
-PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)$ "
+PROMPT="{%B%F{green}%~%f%b%(0?;; %F{red}%?%f)}: "
 
 title() {
     printf '\x1b]2;%s\x07' "${1}"

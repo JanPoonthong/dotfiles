@@ -11,8 +11,8 @@ setopt INTERACTIVE_COMMENTS
 
 export EDITOR="vim"
 export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=100000000
+export SAVEHIST=100000000
 
 zstyle ':completion:*' menu select
 eval "$(dircolors)"

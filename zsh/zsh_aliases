@@ -1,5 +1,5 @@
 # Git
-alias gs='git status -s -b && git log --oneline -n5'
+alias gs='git status -s -b && git log --oneline -n5 >/dev/null || :'
 alias gc='git commit -v'
 alias ga='git add -p'
 alias gr='git rebase'

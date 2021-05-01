@@ -4,5 +4,6 @@ alias gc='git commit -v'
 alias ga='git add -p'
 alias gr='git rebase'
 
-# ls
+# Terminal
 alias ls='ls --color=auto'
+alias gist='gist -p'

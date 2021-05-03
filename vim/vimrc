@@ -2,7 +2,7 @@ set scrolloff=5
 set nowrap
 set hlsearch
 set incsearch
-set textwidth=80 colorcolumn=80
+set colorcolumn=80
 
 packloadall
 

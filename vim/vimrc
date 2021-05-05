@@ -12,11 +12,16 @@ command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
+au BufNewFile,BufRead *.py
+  \ set tabstop=2
+  \     softtabstop=-1
+  \     shiftwidth=2
+
 set wildmenu
 set relativenumber
 set laststatus=2
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set softtabstop=-1
 

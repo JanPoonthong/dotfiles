@@ -40,7 +40,7 @@ set backspace=indent,eol,start
 
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 nnoremap <unique> <tab> %
 
@@ -68,9 +68,9 @@ set statusline+=%=%(%l,%c%V%) "Line, col
 set title
 set titlestring=%t
 
-let &t_SI.="\e[6 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[2 q" "EI = NORMAL mode
+" let &t_SI.="\e[6 q" "SI = INSERT mode
+" let &t_SR.="\e[4 q" "SR = REPLACE mode
+" let &t_EI.="\e[2 q" "EI = NORMAL mode
 
-set esckeys
-set notimeout ttimeout ttimeoutlen=0
+" set esckeys
+" set notimeout ttimeout ttimeoutlen=0

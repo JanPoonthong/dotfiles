@@ -35,7 +35,7 @@ set backspace=indent,eol,start
 
 syntax enable
 set background=dark
-colorscheme ron
+colorscheme solarized
 
 nnoremap <unique> <tab> %
 

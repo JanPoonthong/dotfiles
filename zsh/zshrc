@@ -18,7 +18,7 @@ zstyle ':completion:*' menu select
 eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# bindkey '^I' menu-expand-or-complete
+bindkey '^I' menu-expand-or-complete
 
 PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)> "
 

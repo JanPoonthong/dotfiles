@@ -20,8 +20,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 bindkey '^I' menu-expand-or-complete
 
-PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)> "
-
 title() {
     printf '\x1b]2;%s\x07' "${1}"
 }

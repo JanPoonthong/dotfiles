@@ -24,6 +24,51 @@ title() {
     printf '\x1b]2;%s\x07' "${1}"
 }
 
+#PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)> "
+
+# _fix_cursor() {
+#    echo -ne '\e[6 q'
+# }
+# precmd_functions+=(_fix_cursor)
+
+strager_prompt_cwd() {
+    strager_prompt_shrink_path "$(print -P %~)"
+}
+
+# Replace /foo/bar/baz with /f/b/baz.
+strager_prompt_shrink_path() {
+    local path="${1}"
+    setopt local_options
+    setopt extended_glob
+    printf %s "${path//(#b)([^\/])[^\/]#\//${match[1]}/}"
+}
+
+setopt prompt_subst
+PROMPT="%B%F{green}\$(strager_prompt_cwd)%f%b%(0?;; %F{red}%?%f)> "
+
+strager_gnome_terminal_cursor_sequence() {
+    local shape="${1}"
+    printf "\x1b[%s q" "${shape}"
+}
+
+strager_set_block_cursor() {
+    strager_gnome_terminal_cursor_sequence 2
+}
+
+strager_set_vertical_bar_cursor() {
+    strager_gnome_terminal_cursor_sequence 6
+}
+
+strager_update_cursor_during_edit() {
+    case "${KEYMAP}" in
+        vicmd) strager_set_block_cursor ;;
+        *) strager_set_vertical_bar_cursor ;;
+    esac
+}
+
+PROMPT="${PROMPT}%{\$(strager_update_cursor_during_edit)%}"
+preexec_functions=("${preexec_functions[@]}" strager_set_block_cursor)
+
 typeset -A ZSH_HIGHLIGHT_STYLES
 _cyan='fg=cyan'
 _light_blue='fg=39'

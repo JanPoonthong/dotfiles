@@ -38,7 +38,7 @@ set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
-nnoremap <unique> <tab> %
+noremap <unique> <tab> %
 
 let s:i = 1
 while s:i <= 10

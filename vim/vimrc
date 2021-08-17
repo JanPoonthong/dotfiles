@@ -17,6 +17,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set softtabstop=-1
+set cin
 
 set list
 set listchars=tab:⇥\ 
@@ -35,7 +36,7 @@ syntax enable
 filetype indent on
 filetype plugin on
 set background=dark
-" let g:solarized_termtrans=1
+let g:solarized_termtrans=1
 colorscheme solarized
 
 noremap <unique> <tab> %

@@ -5,7 +5,6 @@ set incsearch
 set colorcolumn=80
 
 autocmd FileType python nmap <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-" nmap <buffer> <F2> <esc>:Texplore<CR>
 command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>

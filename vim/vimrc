@@ -15,8 +15,7 @@ set laststatus=2
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set softtabstop=-1
-set cin
+set softtabstop=4
 
 set list
 set listchars=tab:⇥\ 

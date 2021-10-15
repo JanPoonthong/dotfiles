@@ -25,13 +25,7 @@ title() {
     printf '\x1b]2;%s\x07' "${1}"
 }
 
-# PROMPT="%B%F{green}%~%f%b%(0?;; %F{red}%?%f)> "
-
-# _fix_cursor() {
-#    echo -ne '\e[6 q'
-# }
-# precmd_functions+=(_fix_cursor)
-
+#strager https://github.com/strager
 strager_prompt_cwd() {
     strager_prompt_shrink_path "$(print -P %~)"
 }

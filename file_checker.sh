@@ -7,21 +7,21 @@ do
         printf "\e[32m$FILE exist\e[0m\n"
     else
         printf "\e[31m$FILE doesn't exist\e[0m\n"
-        if [ "~/.zshrc" = "$FILE" ]; then
+        if [ "$HOME/.zshrc" = "$FILE" ]; then
             ln -sf $PWD/zsh/zshrc $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "~/.vimrc" = "$FILE" ]; then
+        if [ "$HOME/.vimrc" = "$FILE" ]; then
             ln -sf $PWD/vim/vimrc $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "~/.gitconfig" = "$FILE" ]; then
+        if [ "$HOME/.gitconfig" = "$FILE" ]; then
             ln -sf $PWD/git/gitconfig $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "~/.gitignore" = "$FILE" ]; then
+        if [ "$HOME/.gitignore" = "$FILE" ]; then
             ln -sf $PWD/git/gitignore $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
     fi
 done
@@ -33,13 +33,13 @@ do
         printf "\e[32m$FILE exist\e[0m\n"
     else
         printf "\e[31m$FILE doesn't exist\e[0m\n"
-        if [ "~/.zsh" = "$FILE" ]; then
+        if [ "$HOME/.zsh" = "$FILE" ]; then
             ln -sf $PWD/zsh $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "~/.vim" = "$FILE" ]; then
+        if [ "$HOME/.vim" = "$FILE" ]; then
             ln -sf $PWD/vim $FILE
-            printf "\e[32mCreated a file $FILE\e[0m\n"
+            echo "\e[35mCreated a file $FILE\e[0m"
         fi
     fi
 done
@@ -50,6 +50,5 @@ if test -f "$FILE"; then
 else
     printf "\e[31m$FILE doesn't exist\e[0m\n"
     sudo ln -sf $PWD/python3.8 /usr/bin/python
-    echo "Ran sudo ln -sf $PWD/python3.8 /usr/bin/python"
-    printf "\e[32mCreated a file\e[0m\n"
+    echo "\e[35mRan sudo ln -sf $PWD/python3.8 /usr/bin/python $FILE\e[0m"
 fi

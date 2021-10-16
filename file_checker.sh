@@ -6,7 +6,6 @@ do
     if test -f "$FILE"; then
         printf "\e[32m$FILE exist\e[0m\n"
     else
-        echo "Hello"
         printf "\e[31m$FILE doesn't exist\e[0m\n"
         if [ "~/.zshrc" = "$FILE" ]; then
             ln -sf $PWD/zsh/zshrc $FILE

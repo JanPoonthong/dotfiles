@@ -1,5 +1,5 @@
 # dotfiles
 
 ```console
-$ ./install.sh
+$ ./file_checker.sh
 ```

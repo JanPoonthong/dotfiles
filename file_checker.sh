@@ -7,19 +7,19 @@ do
         printf "\e[32m$FILE exist\e[0m\n"
     else
         printf "\e[31m$FILE doesn't exist\e[0m\n"
-        if [ "$HOME/.zshrc" = "$FILE" ]; then
+        if [ "$HOME/.zshrc" = "~/.zshrc" ]; then
             ln -sf $PWD/zsh/zshrc $FILE
             echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "$HOME/.vimrc" = "$FILE" ]; then
+        if [ "$HOME/.vimrc" = "~/.vimrc" ]; then
             ln -sf $PWD/vim/vimrc $FILE
             echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "$HOME/.gitconfig" = "$FILE" ]; then
+        if [ "$HOME/.gitconfig" = "~/.gitconfig" ]; then
             ln -sf $PWD/git/gitconfig $FILE
             echo "\e[35mCreated a file $FILE\e[0m"
         fi
-        if [ "$HOME/.gitignore" = "$FILE" ]; then
+        if [ "$HOME/.gitignore" = "~/.gitignore" ]; then
             ln -sf $PWD/git/gitignore $FILE
             echo "\e[35mCreated a file $FILE\e[0m"
         fi

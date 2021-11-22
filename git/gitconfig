@@ -6,3 +6,5 @@
 	excludesfile = ~/.gitignore
 [alias]
 	l = log --pretty --oneline --graph
+[init]
+	defaultBranch = master

@@ -9,13 +9,13 @@ command -nargs=+ Grep :vimgrep "<args>" **/* | copen
 
 nmap <silent> <unique> <Leader>l :nohlsearch<CR>
 
-set wildmenu
+set wildmenu " help
 set relativenumber
-set laststatus=2
-set shiftwidth=4
-set tabstop=4
+set laststatus=2 " white bar down
+set shiftwidth=4 et
+set tabstop=8
 set expandtab
-set softtabstop=4
+set softtabstop=-1
 
 set list
 set listchars=tab:⇥\ 

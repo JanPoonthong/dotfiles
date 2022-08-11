@@ -7,3 +7,4 @@ alias gr='git rebase'
 # Terminal
 alias ls='ls --color=auto'
 alias gist='gist -p'
+alias python='python3'

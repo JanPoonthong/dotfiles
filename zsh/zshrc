@@ -1,9 +1,11 @@
 source ~/dotfiles/zsh/zsh_aliases
+source ~/dotfiles/zsh/zsh_aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:~/Downloads/node-v14.18.0-linux-x64/bin
 export PATH=$PATH:/usr/local/go/bin
+export LS_COLORS=no=00:bd=33:cd=33:di=34:ex=31:ln=35:pi=33:so=32:
 # export PATH=$PATH:~/.local/bin/
 
 setopt HIST_SAVE_NO_DUPS
@@ -16,14 +18,19 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=100000000
 export SAVEHIST=100000000
 
+autoload -Uz compinit
+compinit
+
+unsetopt auto_remove_slash
 zstyle ':completion:*' menu select
-eval "$(dircolors)"
+# eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 bindkey '^I' menu-expand-or-complete
 
 title() {
-    printf '\x1b]2;%s\x07' "${1}"
+    printf '\x1b]1;%s\x07' "${1}" # iTerm
+    printf '\x1b]2;%s\x07' "${1}" # gnome-terminal
 }
 
 #strager https://github.com/strager

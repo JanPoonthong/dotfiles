@@ -1,1 +1,1 @@
-/home/jan/dotfiles/vim/colors/vim-colors-solarized/colors/solarized.vim
+/Users/janpoonthong/dotfiles/vim/colors/vim-colors-solarized/colors/solarized.vim
